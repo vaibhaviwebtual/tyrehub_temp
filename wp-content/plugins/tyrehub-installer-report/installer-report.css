@@ -1,0 +1,186 @@
+.single-service{
+	width: 99%;
+    float: left;
+    border: 1px solid #ccc;
+    margin: 5px 0px;
+    position: relative;
+}
+.single-service .inner{
+    margin: 5px 5px;
+}
+.single-service .view-more .text {
+    background: #4D2C98;
+    color: white;
+    padding: 10px 25px;
+    width: 130px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    float: right;
+    margin-bottom: 5px;
+}
+.single-service .image-block{
+	width: 30%;
+	float: left;
+	text-align: center;
+	padding: 5px;
+}
+.single-service .first-row,
+.single-service .data-block{
+	width: 99%;
+	float: left;
+	padding: 5px;
+}
+.single-service.detail-page .first-row{
+	width: 70%;
+
+}
+.single-service .data-block .fa{	
+    margin-right: 5px;
+}
+.single-service .data-block .mobile-no .fa,
+.single-service .data-block .customer-name .fa{
+	margin-left: 15px;
+    font-size: 30px;
+}
+.single-service .first-row .order-id,
+.single-service .first-row .date,
+.single-service .data-block .customer-name,
+.single-service .data-block .mobile-no{
+	width: 50%;
+	float: left;
+}
+.single-service .data-block .date{
+	text-align: right;
+}
+.single-service .data-block .tyre-name{
+	width: 100%;
+	float: left;
+	margin: 5px 0;
+}
+.single-service .view-more{
+	position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+.single-service .service-img,
+.service-block .service-img{
+	width: 50px;
+}
+
+.single-service .service-details{
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+}
+.single-service ul.service-list{
+	list-style: none;
+}
+.single-service ul li{
+	
+}
+
+.installer-data table.installer-report{
+	width: 98%;
+	margin-top: 20px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+table.installer-report .order-id{
+	width: 11%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+table.installer-report th{
+	border-bottom: 2px solid #ccc;
+}
+.create-invoice{
+	display: none;
+	position: fixed;
+    right: 0;
+    background: green;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+}
+.grand-total,
+.total-charge{
+	border: 2px dotted green;
+    padding: 5px;
+    margin-left: 10px;
+}
+.one-service td{
+		border-bottom: 1px solid #ccc;
+}
+#after_create_invoice{
+	display: block;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    background: rgba(0, 0, 0, 0.5);
+}
+#after_create_invoice .inner{
+	width: 40%;
+	margin: 0 auto;
+	z-index: 1050;
+    top: 150px;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+#after_create_invoice .body{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    min-height: 100px;
+    text-align: center;
+}
+#after_create_invoice button{
+	background: #3E4796;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+#after_create_invoice button a{color: #fff;
+    text-decoration: none;}
+.spinner {
+    background: url('/wp-admin/images/wpspin_light.gif') no-repeat;
+    background-size: 20px 20px;
+    display: none;
+    background-position: center;
+    width: 100%;
+    opacity: .7;
+    filter: alpha(opacity=70);    
+    height: 40px;
+    margin: 5px 5px 0;
+}
+.invoice-report-data{
+    margin-top: 15px;
+}
+.controls{
+    text-align: center;
+    margin-top: 20px;
+}
+.controls .page{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.controls .page.active{
+    background: #e5e5e5;
+}
+.controls .next{
+    cursor: pointer;
+}
+.controls .prev{
+
+}
