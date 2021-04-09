@@ -1,0 +1,321 @@
+<?php
+
+class suppliers_product_pending_List_Table extends WP_List_Table {
+
+	function __construct(){
+	    global  $page;
+	        parent::__construct( array(
+	            'singular'  => __( 'supplier_product', 'mylisttable' ),     //singular name of the listed records
+	            'plural'    => __( 'supplier_products', 'mylisttable' ),   //plural name of the listed records
+	            'ajax'      => true        //does this table support ajax?
+	    ) );
+	    add_action( 'admin_head', array( &$this, 'supplier_product_admin_header' ) );            
+	    }
+
+	    function get_suppliers_product_pending(){
+
+	    	$s=$_POST['s'];
+	    	$status=$_GET['status'];
+	    	if($status){
+			  	$status=$status;
+			  }else{
+			  	$status=2;
+			  }
+	    	$supplier_id=$_GET['supplier_id'];
+	    	
+	    	global $wpdb;
+
+	    	$width = '';
+		    $width=str_replace(".","-",$width);
+		    $ratio = '';
+		    $diameter ='';
+		    $name = '';
+		    $visiblity = 'yes';
+		    $name = strtolower($name);
+
+	  $SQL="SELECT   sp.*,sd.business_name FROM wp_posts";
+	  if($width){
+	 		$SQL.=" INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id ) ";
+		}
+	  if($diameter){
+	  $SQL.=" INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id )";
+	  }
+	  
+	  if($ratio){  
+	  $SQL.=" INNER JOIN wp_postmeta AS mt2 ON ( wp_posts.ID = mt2.post_id )";
+	  } 
+	 
+	 if($name){
+	  	$SQL.=" INNER JOIN wp_postmeta AS mt3 ON ( wp_posts.ID = mt3.post_id )";
+	 } 
+
+	 $SQL.=" INNER JOIN wp_postmeta AS mt4 ON ( wp_posts.ID = mt4.post_id )"; 
+
+	 $SQL.=" INNER JOIN th_supplier_products_list AS sp ON ( wp_posts.ID = sp.product_id )";
+
+	 $SQL.=" LEFT JOIN th_supplier_data AS sd ON (sp.supplier_id = sd.supplier_data_id)"; 
+	   
+	$WHERE="WHERE 1=1 "; 
+	if($width){ 
+		$WHERE.=" AND ( wp_postmeta.meta_key = 'attribute_pa_width' AND wp_postmeta.meta_value IN ('".$width."') )";
+		}
+
+	if($diameter){
+	$WHERE.=" AND ( mt1.meta_key = 'attribute_pa_diameter' AND mt1.meta_value IN ('".$diameter."') )";
+	}
+
+    if($ratio){ 
+    	$WHERE.=" AND ( mt2.meta_key = 'attribute_pa_ratio' AND mt2.meta_value IN ('".$ratio."') ) ";
+    }
+    
+    if($name){
+    	$WHERE.=" AND ( mt3.meta_key = 'attribute_pa_brand' AND mt3.meta_value IN ('".$name."') )";
+    }
+
+    $WHERE.=" AND ( mt4.meta_key = 'tyrehub_visible' AND mt4.meta_value IN ('yes','contact-us')) ";
+    
+    if($status){
+   		$WHERE.=" AND (sp.status='".$status."')";
+	}
+	 if($supplier_id){
+	 	$WHERE.=" AND sp.supplier_id='".$supplier_id."'";
+	 }
+
+    $WHERE.=" AND wp_posts.post_type = 'product_variation' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'wc-deltoinstaller' OR wp_posts.post_status = 'wc-customprocess' OR wp_posts.post_status = 'future' OR wp_posts.post_status = 'draft' OR wp_posts.post_status = 'pending' OR wp_posts.post_status = 'private') GROUP BY wp_posts.ID ORDER BY sp.updated_date DESC";
+
+   $SQL=$SQL.$WHERE;
+
+    $supplierProductData=$wpdb->get_results($SQL);
+
+
+	   		$suppliers_products=array();
+			foreach ($supplierProductData as $key => $value)
+			{
+				//$product_variation = new WC_Product_Variation($value->product_id);
+				$tyre_type=get_post_meta($value->product_id,'attribute_pa_tyre-type',true);
+				
+							$user_info = get_userdata($value->user_id);
+				$suppliers_products[$key]['ID'] = $value->id;
+				$suppliers_products[$key]['product_id']= $value->product_id;
+				$suppliers_products[$key]['product']= get_post_meta($value->product_id,'_variation_description',true);
+				$suppliers_products[$key]['user']= $user_info->user_login;
+				
+				$suppliers_products[$key]['product_list']= '<a href="'.get_admin_url().'/admin.php?page=product-price-list&action=edit&product_id='.$value->product_id.'" class="woocommerce-save-button add-installer-btn"><button type="button" class="button-primary woocommerce-save-button add-installer-btn">View Price Change List</button></a>';	
+
+				//$suppliers_products[$key]['status']= $value->status;
+	      		$suppliers_products[$key]['updated_date']= $value->updated_date;
+					
+
+				
+			}
+			
+			return $suppliers_products;
+			die;
+	    }
+
+		
+	  function supplier_product_pending_admin_header() {
+	    $page = ( isset($_GET['page'] ) ) ? esc_attr( $_GET['page'] ) : false;
+	    if( 'my_list_test' != $page )
+	    return;
+	    echo '<style type="text/css">';
+	    echo '.wp-list-table .column-id { width: 5%; }';
+	    echo '.wp-list-table .column-booktitle { width: 40%; }';
+	    echo '.wp-list-table .column-author { width: 35%; }';
+	    echo '.wp-list-table .column-isbn { width: 20%;}';
+	    echo '</style>';
+	  }
+	  function no_items() {
+	    _e( 'No supplier found, dude.' );
+	  }
+	  function column_default( $item, $column_name ) {
+	    switch( $column_name ) { 
+	        case 'ID':
+	        case 'product_id':
+	        case 'product':
+	        case 'user':
+	        case 'product_list':
+	        case 'updated_date':
+	            return $item[ $column_name ];
+	        default:
+	            return print_r( $item, true ) ; //Show the whole array for troubleshooting purposes
+	    }
+	  }
+	function get_sortable_columns() {
+	  $sortable_columns = array(
+	    'product_id'  => array('product_id',false),
+	    'product'  => array('product',false),
+	    'product_list'   => array('product_list',false),
+	    'updated_date'   => array('updated_date',false)
+	  );
+	  return $sortable_columns;
+	}
+	function get_columns(){
+	        $columns = array(
+	            'cb'        => '<input type="checkbox" />',
+	            'product_id' => __( 'Product ID', 'mylisttable' ),
+	            'product' => __( 'Product', 'mylisttable' ),
+	            'product_list'      => __( 'Product List', 'mylisttable' ),
+	            'updated_date'      => __( 'Updated Date', 'mylisttable' ),
+	        );
+	         return $columns;
+	    }
+	function usort_reorder( $a, $b ) {
+	  // If no sort, default to title
+	  $orderby = ( ! empty( $_GET['orderby'] ) ) ? $_GET['orderby'] : 'status';
+	  // If no order, default to asc
+	  $order = ( ! empty($_GET['order'] ) ) ? $_GET['order'] : 'asc';
+	  // Determine sort order
+	  $result = strcmp( $a[$orderby], $b[$orderby] );
+	  // Send final sort direction to usort
+	  return ( $order === 'asc' ) ? $result : -$result;
+	}
+	function column_product_id1($item){
+	  $actions = array(
+	            'edit'=> sprintf('<a href="?page=%s&action=%s&supp_data_id=%s">Edit</a>','supplier-per-change','edit',$item['ID']),
+	            //'delete'    => sprintf('<a href="?page=%s&action=%s&installer_id=%s">Delete</a>',$_REQUEST['page'],'delete',$item['ID']),
+	        );
+	  return sprintf('%1$s %2$s', $item['product_id'], $this->row_actions($actions) );
+	}
+	function get_bulk_actions() {
+	  $actions = array(
+	    'approve'    => 'Approve',
+	    'cancel'    => 'Cancel'
+	  );
+	  //return $actions;
+	}
+
+	function process_bulk_action() {
+		
+		global $wpdb;
+	   
+		
+	}
+
+	function column_cb($item) {
+	        return sprintf(
+	            '<input type="checkbox" name="supplier[]" value="%s" />', $item['ID']
+	        );    
+	    }
+
+	function prepare_items() {
+		
+	  $columns  = $this->get_columns();
+	  $hidden   = array();
+	  $sortable = $this->get_sortable_columns();
+	  $this->_column_headers = array( $columns, $hidden, $sortable );
+	  $this->process_bulk_action();
+	  $data=$this->get_suppliers_product_pending();
+	 if($_GET['orderby']){
+	 usort($data, array( &$this, 'usort_reorder' ) );	
+	 }
+	  //usort($data, array( &$this, 'usort_reorder' ) );
+	  
+	  $per_page = 30;
+	  $current_page = $this->get_pagenum();
+	  $total_items = count($data);
+	  // only ncessary because we have sample data
+	  $found_data = array_slice($data,( ( $current_page-1 )* $per_page ), $per_page );
+	  $this->set_pagination_args( array(
+	    'total_items' => $total_items,                  //WE have to calculate the total number of items
+	    'per_page'    => $per_page                     //WE have to determine how many items to show on a page
+	  ) );
+	  $this->items = $found_data;
+	}
+} //class
+
+
+
+function supplier_product_pending_price_change_list(){
+  
+  $SupProductPendingPriceList = new suppliers_product_pending_List_Table();
+
+  $status=$_GET['status'];
+
+  if($status=='pending'){
+  $title='Pending';
+  }else{
+  	$title='Change';
+  }
+  ?>
+  
+  <div class="wrap"><h2>Suppliers - Price <?=$title;?> Request
+ 	<div class="admin-url" hidden=""><?php echo admin_url('admin-ajax.php'); ?></div></h2> 
+ <br>
+ <div>
+ 	<div style="margin-top: 10px;">
+ 		<a href="?page=supplier-add-new" class="page-title-action">Add New Supplier</a>
+ 		<a href="?page=supplier-manage" class="page-title-action">All Supplier</a>
+ 		<a href="?page=supplier-product-price-change-list" class="page-title-action" >Price All List</a> 
+ 		<a href="?page=change_price_log" class="page-title-action">Price Changes Logs</a>
+		
+ 	</div>
+ 	<div style="margin-top: 10px;">
+		 <form method="get">
+		 	<input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>">
+		 <select name="supplier_id" id="supplier_id">
+						<option value="">--Choose Supplier--</option>
+						
+						<?php
+						global $wpdb;
+						$sql = "SELECT * FROM th_supplier_data";
+						$supplier_data = $wpdb->get_results($sql); 
+						foreach ($supplier_data as $supplier ) 
+				        {
+				            
+				            if($_GET['supplier_id']==$supplier->supplier_data_id){
+				            	$selected='selected="selected"';
+				            }else{
+				            	$selected='';
+				            }
+				            echo '<option value="'.$supplier->supplier_data_id.'" '.$selected.'>'.$supplier->business_name.'</option>';
+				        }
+						?>
+					</select>
+
+					<select name="status" id="status">
+						<option value="">--Choose Status--</option>
+						<option value="1" <?php if($_GET['status']==1){ echo 'selected';}?>>Approved</option>
+						<option value="2" <?php if($_GET['status']==2 || $_GET['status']==''){ echo 'selected';}?>>Pending</option>
+						<!-- <option value="3" <?php if($_GET['status']==3){ echo 'selected';}?>>Auto Approve</option>
+						<option value="3" <?php if($_GET['status']==37){ echo 'selected';}?>>N/A</option>
+						<option value="4" <?php if($_GET['status']==4){ echo 'selected';}?>>Cancel</option> -->
+						
+					</select>
+			<input type="submit" name="Filter" value="Filter" class="button">
+		</form>
+</div>
+</div>
+
+  <form method="post">
+  
+    <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>">
+    <?php $SupProductPendingPriceList->prepare_items();?>
+    <?php
+    //$SupProductPendingPriceList->search_box( 'search', 'search_id' );
+    $SupProductPendingPriceList->display(); ?>
+    </form></div>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+		  $('.cancel-btn').click(function() {
+		    if (confirm('Are you sure?')) {
+		      var url = $(this).attr('href');
+		      window.location.href =url;
+		    }
+		  });
+		});
+    </script>
+<?php }
+
+function supplier_product_price_change_approve(){
+  
+  	 $action=$_GET['action'];
+	 if($action=='edit'){
+	  include_once('supplier-per-change.php');
+	   supplier_per_change();
+	 }else{
+	  	  //tim_add_new_supplier();	
+	 }
+}
+
+?>
