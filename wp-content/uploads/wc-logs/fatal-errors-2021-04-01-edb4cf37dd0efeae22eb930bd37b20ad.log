@@ -1,0 +1,40 @@
+2021-04-01T05:02:49+00:00 CRITICAL Uncaught Error: Call to a member function get_row() on null in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php:10106
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php(9933): make_name('4')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-admin\includes\template.php(1389): data_input_box_content_vehicle_info(Object(WP_Post), Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-admin\edit-form-advanced.php(688): do_meta_boxes(Object(WP_Screen), 'normal', Object(WP_Post))
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\post.php(206): require('D:\\xampp\\htdocs...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10106
+
+2021-04-01T05:04:03+00:00 CRITICAL Object of class stdClass could not be converted to string in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 9933
+
+2021-04-01T05:04:30+00:00 CRITICAL Object of class stdClass could not be converted to string in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 9933
+
+2021-04-01T05:05:03+00:00 CRITICAL Object of class stdClass could not be converted to string in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 9933
+
+2021-04-01T05:07:55+00:00 CRITICAL Cannot redeclare make_name() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php:10104) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10118
+
+2021-04-01T05:09:55+00:00 CRITICAL Cannot redeclare make_name() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php:10104) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10118
+
+2021-04-01T05:10:22+00:00 CRITICAL Cannot redeclare make_name() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php:10104) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10118
+
+2021-04-01T05:10:22+00:00 CRITICAL Cannot redeclare make_name() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php:10104) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10118
+
+2021-04-01T05:10:25+00:00 CRITICAL Cannot redeclare make_name() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php:10104) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10118
+
+2021-04-01T05:34:42+00:00 CRITICAL syntax error, unexpected '$sub_modal_id' (T_VARIABLE), expecting ',' or ';' in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10113
+
+2021-04-01T05:34:43+00:00 CRITICAL syntax error, unexpected '$sub_modal_id' (T_VARIABLE), expecting ',' or ';' in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10113
+
+2021-04-01T05:34:45+00:00 CRITICAL syntax error, unexpected '$sub_modal_id' (T_VARIABLE), expecting ',' or ';' in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 10113
+
+2021-04-01T11:22:46+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+

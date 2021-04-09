@@ -1,0 +1,11 @@
+2021-04-07T10:24:28+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-franchise-report\function.php:316
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): admin_franchise_offline_orders('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_admin_f...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-franchise-report\function.php on line 316
+
+2021-04-07T11:59:09+00:00 CRITICAL Out of memory (allocated 100663296) (tried to allocate 20480 bytes) in D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php on line 190
+

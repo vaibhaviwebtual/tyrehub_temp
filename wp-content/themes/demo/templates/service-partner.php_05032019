@@ -1,0 +1,214 @@
+<?php
+ /* Template Name: service-partner */
+get_header();
+?>
+<div id="pageContent">
+			<!-- Panel Block -->
+	<!-- Admin url for ajax function call -->
+	<?php 
+		$product_id = '';
+		global $woocomerce;
+	?>
+	<div class="admin_url" hidden=""><?php echo admin_url('admin-ajax.php');
+	    ?></div>
+	<div class="site-url" hidden=""><?php echo get_site_url(); ?></div>
+	<span class="product_id" hidden=""><?php if(isset($_GET['product_id'])){echo $product_id = $_GET['product_id']; } ?></span>
+	<span class="prd_attr_vehicle" hidden=""><?php 
+		$prd_attr_vehicle = '';
+		if(isset($_GET['product_id']))
+		{
+			$product_id = $_GET['product_id'];
+    		$product_variation = wc_get_product( $product_id );    		
+    		$variation_data = $product_variation->get_data(); 
+    			echo $prd_attr_vehicle = $variation_data['attributes']['pa_vehicle-type'];    		
+		} ?></span>
+	<span class="session-key" hidden><?php echo WC()->session->get_customer_id(); ?></span>
+	<span class="cart_item_id" hidden=""><?php echo $cart_item_id = $_GET['cart_item_id']; ?></span>
+	<!-- Service Voucher product id -->
+	    <?php 
+	    	$sku = 'service_voucher';
+  			$product_id = $wpdb->get_var( $wpdb->prepare( "SELECT post_id FROM $wpdb->postmeta WHERE meta_key='_sku' AND meta_value='%s' LIMIT 1", $sku ) );
+	    ?>
+	<div class="container">
+		<div class="location_section1">
+			<span class="current-lat" hidden=""></span>
+			<span class="current-lon" hidden=""></span>
+		  <?php include('service-partner/modal.php'); ?>
+		<div class="container title_section">
+			<h2>Service Partner</h2>
+			<div class="col-md-12">
+				<div class="col-md-6 col-sm-6">
+					<div class="location_part2">
+						<ul class="tabs nav nav-tabs">
+						 	<li class="tab-link current" data-tab="tab-1">Service Partner Near You</li>
+						 	<!-- <li class="tab-link" data-tab="tab-2">Saved Service Partner</li> -->
+						</ul>
+						<br>
+						<p>Select one of our trusted and certified Service Partner for your selected tyre’s Fitting, Alignment and Balancing. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-md-12 col-sm-12 filter-section">
+				
+				<div class="col-md-6 col-sm-6">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<input id="myInput" class="search_input" type="text" value="<?php echo $_POST['pincode']; ?>" placeholder="Enter Pincode or Location" autocomplete="new-password"/>
+					 
+					<table id="address" style="display: none">
+     <tr>
+       <td class="slimField"><input class="field" id="street_number"
+             disabled="true"></input></td>
+       <td class="wideField" colspan="2"><input class="field" id="route"
+             disabled="true"></input></td>
+     </tr>
+     <tr>
+       
+       <td class="wideField" colspan="3"><input class="field" id="locality"
+             disabled="true"></input></td>
+     </tr>
+     <tr>
+       <td class="slimField"><input class="field"
+             id="administrative_area_level_1" disabled="true"></input></td>
+       <td class="wideField"><input class="field" id="postal_code"
+             disabled="true" value="<?php echo $_POST['pincode']; ?>"></input></td>
+     </tr>
+     <tr>
+       <td class="label">Country</td>
+       <td class="wideField" colspan="3"><input class="field"
+             id="country" disabled="true"></input></td>
+     </tr>
+   </table>		
+			<input hidden type="" name="" class='vehicle-type' value="<?php if(isset($_POST['vehicle_type'])){ echo $_POST['vehicle_type']; }?>">	
+			<button class="button searchbtn" >SEARCH</button>
+			<div class="pincode-error" style="color:red"></div>
+</div>
+				<div class="col-md-6 col-sm-6">
+					<div style="text-align: right;">
+						<button class="button show-map">Show Map</button>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<div id="tab-1" class="tab-content current">
+					
+					<!-- <ul>
+					 	<li class="installer-tab active" data-tab="installer-list">Installer List</li>
+					 	<li class="installer-tab" data-tab="installer-map">Installer Google View</li>
+					</ul> -->
+				<?php
+				 global $wpdb;
+
+                       if($prd_attr_vehicle == 'two-wheeler' || $prd_attr_vehicle == 'three-wheeler'){
+				 			$row = $wpdb->get_results("SELECT * FROM th_installer_data where user_id = 55");
+				 		}
+				 		else{
+				 			$row = $wpdb->get_results("SELECT * FROM th_installer_data");
+				 		}
+                        foreach ($row as $data) {
+                        	?>
+                        	<div class="single-list-for-map" data-id="<?php echo $data->installer_data_id; ?>">
+                        		<div class="address" hidden><strong><?php echo $data->business_name.'</strong><br>'.$data->address.'<br>'.$data->state.'<br>'.$data->city.'-'.$data->pincode; ?>
+                    			</div>
+                    			<span class="lattitude" hidden=""><?php echo $data->location_lattitude; ?></span>
+								<span class="longitude" hidden=""><?php echo $data->location_longitude; ?></span>
+                    		</div>
+                        	<?php
+                        }
+                ?>
+				<div class="col-md-12 col-sm-12 installer-tab-content installer-list active">
+					<?php
+						if(isset($_POST['vehicle_type'])){
+                        	$vehicle_id = $_POST['vehicle_type'];
+                        	
+                        			$sql = "SELECT * from th_installer_data";
+                        	$row = $wpdb->get_results($sql);
+
+                        }
+                        elseif($prd_attr_vehicle == 'two-wheeler' || $prd_attr_vehicle == 'three-wheeler'){
+                        	$row = $wpdb->get_results("SELECT * FROM th_installer_data where user_id = 55");
+                        }
+                        else{
+                        	$row = $wpdb->get_results("SELECT * FROM th_installer_data");
+                        }
+                        foreach ($row as $data) {
+                        	                   
+                   	?>                       
+                                 
+					<div class="single-list" data-id="<?php echo $data->installer_data_id; ?>">
+						<div class="left">
+							<div class="col-md-2 col-sm-2">
+								<img class="aligncenter size-full wp-image-74" src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/09/icons8-car-service-filled-100.png" alt="" width="100" height="100" />
+							</div>
+							
+							<div class="col-md-4 col-sm-4">
+								<div class="address" hidden><strong><?php echo $data->business_name.'</strong><br>'.$data->address.'<br>'.$data->state.'<br>'.$data->city.'-'.$data->pincode; ?>
+                    			</div>
+								<h4><?php echo $data->business_name; ?></h4>
+								<div><?php echo $data->address; ?></div>
+								<div><?php echo $data->city.'-'.$data->pincode; ?></div>
+								<div><?php echo $data->state; ?></div>
+							</div>
+						</div>
+						<div class="right">
+							<div class="col-md-2 col-sm-2">
+								<img class="aligncenter size-full wp-image-76" src="<?php echo get_site_url(); ?>/wp-content/uploads/2018/09/icons8-map-marker-100.png" alt="" width="100" height="100" />
+							</div>
+							<div class="col-md-3 col-sm-3">
+								
+								<span class="lattitude" hidden=""><?php echo $data->location_lattitude; ?></span>
+								<span class="longitude" hidden=""><?php echo $data->location_longitude; ?></span>
+								<i class="fa fa-map-marker"></i>&nbsp;<span class="km"></span>
+								
+
+								<div><i class="fa fa-calendar"></i>&nbsp;10 am to 9 pm (<?php echo $data->available_days; ?> )</div>
+								<!-- <div><i class="fa fa-clock-o"></i>&nbsp;<?php echo $data->available_time ?></div> -->
+								<div><i class="fa fa-phone"></i>&nbsp;<?php echo $data->contact_no; ?></div>
+							</div>
+							<?php
+						 if(isset($_POST['vehicle_type']) || isset($_GET['product_id'])){ ?>
+							<div class="col-md-2 col-sm-2 installer-btn">
+								<button class="button installer_btn use_this_installer 
+" data-toggle="modal" data-target="#service_modal">USE THIS INSTALLER</button>
+							</div>
+							<?php } ?>
+						</div>
+						<ul class="installer-type">
+							<!-- <li><i class="fas fa fa-sort-amount-up"></i><i class="fas fa fa-wifi"></i>Wifi Services</li>
+							
+							<li><i class="fas fa fa-car"></i></i>Car Pickup-Dropoff service</li>
+							<li><i class="fa fa-wrench"></i>Shuttle Service</li> -->
+							<li><i class="fas fa fa-tint"></i>Water Cooler </li>
+							<li><i class="fas fa fa-coffee"></i>Free Tea/Coffee</li>
+						</ul>
+					</div>
+				<?php } ?>
+			
+				</div>
+				<div class="installer-tab-content installer-map col-md-12 col-sm-12">
+				<div style="width: 80%;">
+					<div id="map" style="height: 500px;"></div>
+				</div>
+				</div>
+				</div>
+<div id="tab-2" class="tab-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+
+</div>
+</div>
+</div>
+			</div>
+			
+			<div class="block offset-sm">
+				<div class="container">
+					
+				</div>
+			</div>
+			<!-- //Panel Block -->
+		</div>
+
+<?php
+get_footer();
+?>

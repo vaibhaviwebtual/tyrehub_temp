@@ -1,0 +1,118 @@
+<?php
+require_once("../../../wp-load.php");
+
+global $wpdb;
+
+$latitude1='23.094562';
+$longitude1='72.595279';
+   
+$latitude2='23.174108';
+$longitude2='72.637152';
+
+
+//getDistanceBetweenPointsNew($latitude1, $longitude1,$latitude2, $longitude2, $unit = 'Km');
+
+$qry ='SELECT *,(((acos(sin((23.168854*pi()/180)) * sin((`latitude`*pi()/180))+cos((23.168854*pi()/180)) * cos((`latitude`*pi()/180)) * cos(((72.580712- `longitude`)*pi()/180))))*180/pi())*60*1.1515*1.609344) as distance 
+FROM `th_city_delivery_range` HAVING distance < km_range
+ORDER BY distance';
+
+$results=$wpdb->get_results($qry);
+
+
+foreach ($results as $key => $value) {
+    # code...
+    $url = "https://maps.googleapis.com/maps/api/distancematrix/json?key=AIzaSyCmMCGIlJKPcPn_hjlgo6j-RMfN4ZtOH70&origins=".$latitude2.",".$longitude2."&destinations=".$value->latitude.",".$value->longitude."&mode=driving&language=pl-PL";
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            $response = curl_exec($ch);
+            curl_close($ch);
+            $response_a = json_decode($response, true);
+           echo 'radius-distance='.$value->distance;
+           echo '<br>';
+           echo 'google-destance='.$dist = $response_a['rows'][0]['elements'][0]['distance']['text'];
+
+
+
+}
+
+
+function getDistanceBetweenPointsNew($latitude1, $longitude1,
+$latitude2, $longitude2, $unit = 'Mi')
+{
+   $theta = $longitude1 - $longitude2;
+   $distance = (sin(deg2rad($latitude1)) *
+   sin(deg2rad($latitude2))) + (cos(deg2rad($latitude1)) *
+   cos(deg2rad($latitude2)) * cos(deg2rad($theta)));
+   $distance = acos($distance);
+   $distance = rad2deg($distance);
+   $distance = $distance * 60 * 1.1515;
+   switch($unit)
+   {
+      case 'Mi': break;
+      case 'Km' : $distance = $distance *1.609344;
+   }
+   return (round($distance,2));
+}
+
+die;
+$row = 1;
+if (($handle = fopen("csv/jk-tyre-import-price.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        $num = count($data);
+        
+        if($row!=1){
+        	$product_id=$data[0];
+            $tube_price=$data[2];
+            $price=$data[10];
+            $old_tyre_price=get_post_meta($product_id, 'tyre_price', true);
+            $old_sale_price=get_post_meta($product_id, '_sale_price', true);
+
+            if($tube_price!=''){
+                $tyre_price=$price-$tube_price;
+                $old_tube_price=get_post_meta($product_id, 'tube_price', true);
+                update_post_meta($product_id, '_sale_price',$price);
+                update_post_meta($product_id, '_price',$price);
+                update_post_meta($product_id, 'tyre_price',$tyre_price);
+                update_post_meta($product_id, 'tube_price',$tube_price);
+                
+                
+            }else{
+               $tyre_price=$price; 
+               update_post_meta($product_id, '_sale_price',$tyre_price);
+               update_post_meta($product_id, '_price',$tyre_price);
+               update_post_meta($product_id, 'tyre_price',$tyre_price);
+               $old_tube_price=0;
+            }
+
+            echo $product_id.'#'.$tyre_price.' , '.$price;
+            echo '<br>';
+            
+            //echo '<br>';
+			//update_post_meta($product_id, '_sale_price',$price);
+            //update_post_meta($product_id, '_price',$price);
+           //update_post_meta($product_id, 'tyre_price',$tyre_price);
+            
+            $insert = $wpdb->insert('th_change_product_price_log', array(
+                    'product_id' => $product_id,
+                    'old_tube_price' => $old_tube_price,
+                    'new_tube_price' => $tube_price,
+                    'old_tyre_price' => $old_tyre_price,
+                    'new_tyre_price' => $tyre_price,
+                    'old_sale_price' => $old_sale_price,
+                    'new_sale_price' => $price,
+                    'old_mrp_price' => 0,
+                    'new_mrp_price' =>0,
+                    'date' => date("Y-m-d h:i:sa"),
+                    'user_id' =>92,
+                ));            
+	        
+    	}
+        $row++;
+    }
+    fclose($handle);
+}
+?>

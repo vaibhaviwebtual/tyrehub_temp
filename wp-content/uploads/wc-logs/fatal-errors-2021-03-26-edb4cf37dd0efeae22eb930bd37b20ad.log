@@ -1,0 +1,39 @@
+2021-03-26T06:20:44+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Error saving action: Database error. in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\migration\ActionScheduler_DBStoreMigrator.php:44
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_HybridStore.php(242): ActionScheduler_DBStoreMigrator->save_action(Object(ActionScheduler_Action), NULL)
+#1 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(177): ActionScheduler_HybridStore->save_action(Object(ActionScheduler_Action))
+#2 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(84): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(36): ActionScheduler_ActionFacto in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\migration\ActionScheduler_DBStoreMigrator.php on line 44
+
+2021-03-26T06:24:18+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Error saving action: Database error. in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\migration\ActionScheduler_DBStoreMigrator.php:44
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_HybridStore.php(242): ActionScheduler_DBStoreMigrator->save_action(Object(ActionScheduler_Action), NULL)
+#1 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(177): ActionScheduler_HybridStore->save_action(Object(ActionScheduler_Action))
+#2 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(84): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(36): ActionScheduler_ActionFacto in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\migration\ActionScheduler_DBStoreMigrator.php on line 44
+
+2021-03-26T06:25:42+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Error saving action: Database error. in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\migration\ActionScheduler_DBStoreMigrator.php:44
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_HybridStore.php(242): ActionScheduler_DBStoreMigrator->save_action(Object(ActionScheduler_Action), NULL)
+#1 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(177): ActionScheduler_HybridStore->save_action(Object(ActionScheduler_Action))
+#2 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(84): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(36): ActionScheduler_ActionFacto in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce\packages\action-scheduler\classes\migration\ActionScheduler_DBStoreMigrator.php on line 44
+
+2021-03-26T09:07:37+00:00 CRITICAL Cannot redeclare tir_menu() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-installer-report\index.php:15) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-installer-report\index-17-09-2019.php on line 26
+
+2021-03-26T09:07:45+00:00 CRITICAL Cannot redeclare tir_menu() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-installer-report\index.php:15) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-installer-report\index-17-09-2019.php on line 26
+
+2021-03-26T09:54:36+00:00 CRITICAL Out of memory (allocated 39845888) (tried to allocate 20480 bytes) in D:\xampp\htdocs\tyrehub_temp\wp-includes\functions.php on line 624
+
+2021-03-26T10:33:20+00:00 CRITICAL Cannot redeclare sold_out_menu_items() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout-14-06-2019.php:13) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout.php on line 18
+
+2021-03-26T10:33:26+00:00 CRITICAL Cannot redeclare sold_out_menu_items() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout-14-06-2019.php:13) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout.php on line 18
+
+2021-03-26T10:33:43+00:00 CRITICAL Cannot redeclare WPO_WCPDF() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce-pdf-invoices-packing-slips\woocommerce-pdf-invoices-packingslips.php:343) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce-pdf-invoices-packing-slips-old\woocommerce-pdf-invoices-packingslips.php on line 344
+
+2021-03-26T10:33:49+00:00 CRITICAL Cannot redeclare WPO_WCPDF() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce-pdf-invoices-packing-slips\woocommerce-pdf-invoices-packingslips.php:343) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\woocommerce-pdf-invoices-packing-slips-old\woocommerce-pdf-invoices-packingslips.php on line 344
+
+2021-03-26T10:34:37+00:00 CRITICAL Cannot redeclare sold_out_menu_items() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout-14-06-2019.php:13) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout.php on line 18
+
+2021-03-26T10:34:44+00:00 CRITICAL Cannot redeclare sold_out_menu_items() (previously declared in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout-14-06-2019.php:13) in D:\xampp\htdocs\tyrehub_temp\wp-content\plugins\tyrehub-product-soldout\product-soldout.php on line 18
+

@@ -1,0 +1,4 @@
+2021-04-06T09:04:40+00:00 CRITICAL Out of memory (allocated 35651584) (tried to allocate 20480 bytes) in D:\xampp\htdocs\tyrehub_temp\wp-includes\functions.php on line 624
+
+2021-04-06T11:10:19+00:00 CRITICAL Out of memory (allocated 155189248) (tried to allocate 20480 bytes) in D:\xampp\htdocs\tyrehub_temp\wp-includes\meta.php on line 1074
+

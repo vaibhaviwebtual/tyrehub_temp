@@ -1,0 +1,83 @@
+2021-03-30T13:01:45+05:30 CRITICAL syntax error, unexpected end of file in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\woocommerce\checkout\payment.php on line 157
+
+2021-03-30T18:19:53+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:34:21+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:35:47+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:41:18+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:41:39+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:43:27+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:51:51+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T18:55:00+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+
+2021-03-30T19:03:04+05:30 CRITICAL Uncaught Error: Call to a member function get_description() on bool in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php:163
+Stack trace:
+#0 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(292): franchise_product_add_to_cart('')
+#1 D:\xampp\htdocs\tyrehub_temp\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#2 D:\xampp\htdocs\tyrehub_temp\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#3 D:\xampp\htdocs\tyrehub_temp\wp-admin\admin-ajax.php(187): do_action('wp_ajax_franchi...')
+#4 {main}
+  thrown in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\franchise-function.php on line 163
+

@@ -1,0 +1,4 @@
+2021-03-23T04:44:57+00:00 CRITICAL require_once(): Failed opening required 'paytm/config_paytm.php' (include_path='.:/www/server/php/73/lib/php') in /www/wwwroot/temp.tyrehub.com/wp-content/themes/demo/functions.php on line 7
+
+2021-03-23T04:44:57+00:00 CRITICAL require_once(): Failed opening required 'paytm/config_paytm.php' (include_path='.:/www/server/php/73/lib/php') in /www/wwwroot/temp.tyrehub.com/wp-content/themes/demo/functions.php on line 7
+

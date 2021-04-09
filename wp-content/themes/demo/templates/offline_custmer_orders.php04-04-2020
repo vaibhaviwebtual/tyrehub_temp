@@ -1,0 +1,278 @@
+<?php
+ /* Template Name: offline-customer-orders */
+$user = wp_get_current_user();
+$role = $user->roles[0];
+if ( !is_user_logged_in() && $role != 'Installer'){
+     wp_redirect(get_permalink( get_option('woocommerce_myaccount_page_id')));
+     die();
+}
+get_header();
+?>
+<div id="pageContent" class="">
+	<div class="container tracking-process">
+		<div class="admin-url" hidden=""><?php echo admin_url('admin-ajax.php'); ?></div>
+		<h2>Offline Customer Orders</h2>
+		<div class="search_filter">
+			<form name="frmsearch" id="frmsearch" action="" method="post">
+				<input type="text" name="search_txt" id="search_txt" value="<?php if(!empty($_POST['search_txt'])){ echo $_POST['search_txt']; } ?>">
+				<input type="hidden" name="action" id="action" value="search">
+				<input type="submit" name="searchbtn" id="searchbtn" value="Search">
+			</form>
+			<form name="frmsearch_status" id="frmsearch_status" action="" method="post">
+				<select name="search_by_status" id="search_by_status" onChange="document.forms['frmsearch_status'].submit()">
+					<option value="">Select</option>
+					<option value="1" <?php if($_POST['search_by_status'] == 1){ echo "selected";  } ?>>Pending</option>
+					<option value="2" <?php if($_POST['search_by_status'] == 2){ echo "selected";  } ?>>Completed</option>
+				</select>
+				<input type="hidden" name="action" id="action" value="searchstatus">
+			</form>
+		</div>
+		
+		<div class="offline_order_list">
+			<table class="table shop_table shop_table_responsive my_account_orders">
+				<thead>
+					<tr>
+						<th>Order.No</th>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Date</th>
+						<th>Status</th>
+						<th>Total</th>
+						<th class="action">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php
+					global $woocommerce , $wpdb;
+					$franchise_id = get_current_user_id();
+					$user_id = get_current_user_id();
+					$SQL="SELECT * FROM th_installer_data WHERE user_id='".$user_id."' AND is_franchise='yes'";
+					$franchise=$wpdb->get_row($SQL);
+					$franchise_id=$franchise->installer_data_id;
+
+					$showRecordPerPage = 10;
+
+					$pageshiv=get_query_var('page');
+					if (isset($pageshiv) && $pageshiv != 0) {
+					$currentPage = $pageshiv;
+					}else{
+					$currentPage = 1;
+					}
+					$startFrom = ($currentPage * $showRecordPerPage) - $showRecordPerPage;
+
+					if(isset($_POST['action']) && $_POST['action'] == "search" && $_POST['search_txt'] != '' && !empty($_POST['search_txt']	))
+					{
+
+						$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE order_number LIKE '$search_text%' or billing_first_name LIKE '$search_text%' or billing_last_name LIKE '$search_text%' or billing_phone LIKE '$search_text%'  and franchise_id = '$franchise_id'");
+					}
+					elseif(isset($_POST['action']) && $_POST['action'] == "searchstatus" && $_POST['search_by_status'] != "") {
+
+						$search_text = $_POST['search_by_status'];
+						//echo "SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $start_from, $limit";
+
+						if($search_text == 1){
+
+
+
+							$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id'");
+						}
+						if($search_text == 2){
+
+
+
+							$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id'");
+						}
+					}
+					else{
+
+						$row = $wpdb->get_results("SELECT * FROM wp_franchises_order where franchise_id = '$franchise_id'");
+					}
+
+					$res = count($row);
+					$totalEmployee = $res;
+					$lastPage = ceil($totalEmployee/$showRecordPerPage);
+					$firstPage = 1;
+					$nextPage = $currentPage + 1;
+					$previousPage = $currentPage - 1;
+
+
+					if(isset($_POST['action']) && $_POST['action'] == "search" && $_POST['search_txt'] != '' && !empty($_POST['search_txt']	))
+					{
+						$search_text = $_POST['search_txt'];
+
+						$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE order_number LIKE '$search_text%' or billing_first_name LIKE '$search_text%' or billing_last_name LIKE '$search_text%' or billing_phone LIKE '$search_text%'  and franchise_id = '$franchise_id' ORDER BY order_id DESC");
+					}
+					elseif(isset($_POST['action']) && $_POST['action'] == "searchstatus" && $_POST['search_by_status'] != "") {
+
+						$search_text = $_POST['search_by_status'];
+						//echo "SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $start_from, $limit";
+
+						if($search_text == 1){
+							//echo "SELECT * FROM wp_franchises_order WHERE (status = '$search_text' and franchise_id = '$franchise_id') or status = '0' and franchise_id = '$franchise_id')";
+
+							$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE (status = '$search_text' and franchise_id = '$franchise_id') or (status = '0' and franchise_id = '$franchise_id')");
+						}
+						if($search_text == 2){
+
+							$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $startFrom, $showRecordPerPage");
+						}
+
+
+						//$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id' ORDER BY order_id DESC");
+
+
+					}
+					else{
+
+
+						$row = $wpdb->get_results("SELECT * FROM wp_franchises_order where franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $startFrom, $showRecordPerPage");
+					}
+
+
+
+			// 	global $woocommerce , $wpdb;
+				// 	$franchise_id = get_current_user_id();
+				// $user_id = get_current_user_id();
+				// $SQL="SELECT * FROM th_installer_data WHERE user_id='".$user_id."' AND is_franchise='yes'";
+				// $franchise=$wpdb->get_row($SQL);
+				// $franchise_id=$franchise->installer_data_id;
+				// 	$product = wc_get_product(2870);
+
+				// 	$limit = 5;
+				// 	$pageshiv=get_query_var('page');
+				// 	if (isset($pageshiv) && $pageshiv != 0) {
+				// 		$pn  = $pageshiv;
+				// 	}
+				// 	else {
+				// 	  	$pn=1;
+				// 	};
+
+
+
+				// 	$start_from = ($pn-1) * $limit;
+
+				// 	if(isset($_POST['action']) && $_POST['action'] == "search")
+				// 	{
+				// 		$search_text = $_POST['search_txt'];
+				// 		$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE order_number LIKE '$search_text%' or billing_first_name LIKE '$search_text%' or billing_last_name LIKE '$search_text%' or billing_phone LIKE '$search_text%'  and franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $start_from, $limit");
+				// 	}
+				// 	elseif(isset($_POST['action']) && $_POST['action'] == "searchstatus" && $_POST['search_by_status'] != "") {
+
+				// 		$search_text = $_POST['search_by_status'];
+				// 		//echo "SELECT * FROM wp_franchises_order WHERE status = '$search_text' and franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $start_from, $limit";
+
+				// 		$row = $wpdb->get_results("SELECT * FROM wp_franchises_order WHERE status = '$search_text' or status = 0 and franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $start_from, $limit");
+				// 	}
+				// 	else{
+
+				// 		$row = $wpdb->get_results("SELECT * FROM wp_franchises_order where franchise_id = '$franchise_id' ORDER BY order_id DESC LIMIT $start_from, $limit");
+
+				// 	}
+					if(!empty($row)){
+						foreach ($row as $data) {
+				?>
+						<tr class="order">
+							<td><a href="<?php echo site_url('/thank-you/?order_id='.base64_encode($data->order_number)); ?>"><?php echo $data->order_number; ?></a></td>
+
+							<td><i class="fa fa-user" aria-hidden="true"></i> <?php echo $data->billing_first_name; ?> <?php echo $data->billing_last_name; ?></td>
+							<td><i class="fa fa-phone-square" aria-hidden="true"></i> <?php echo $data->billing_phone; ?></td>
+							<td><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $date = date("d-M-Y", strtotime($data->date_completed)); ?>
+							</td>
+							<td>
+								<select name="status_changes" class="status_ch" data-sel="<?php echo $data->order_id; ?>" id="statuschanges_<?php echo $data->order_id; ?>">
+									<option value="1" <?php if($data->status == 1 || $data->status == 0){ echo "selected"; } ?>>Pending</option>
+									<option value="2" <?php if($data->status == 2){ echo "selected"; } ?>>Completed</option>
+								</select>
+							</td>
+							<td><i class="fa fa-inr" aria-hidden="true"></i> <?php echo $data->total; ?></td>
+							<td class="action">
+								<a href="<?php echo admin_url(); ?>/admin-ajax.php?action=offline_order_pdf&document_type=offline-invoice&order_ids=<?php echo $data->order_id; ?>&service_id=<?php echo $data->order_id; ?>&_wpnonce=04e74a5779" target="_blank">
+								<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+								</a>
+								<a href="<?php echo site_url('/thank-you/?order_id='.base64_encode($data->order_number)); ?>">
+									<i class="fa fa-eye" aria-hidden="true"></i>
+								</a>
+							</td>
+						</tr>
+					<?php
+					}
+				} else { ?>
+					<tr class="order"><td colspan="7" style="text-align: center;">Record not found</td></tr>
+				<?php } ?>
+				</tbody>
+			</table>
+		</div>
+		
+		<?php if($res > $showRecordPerPage && $_POST['action'] != "searchstatus"){ ?>
+		<nav aria-label="Page navigation">
+			<ul class="pagination">
+			<?php if($currentPage != $firstPage) { ?>
+			<li class="page-item">
+			<a class="page-link" href="?page=<?php echo $firstPage ?>" tabindex="-1" aria-label="Previous">
+			<span aria-hidden="true">First</span>
+			</a>
+			</li>
+			<?php } ?>
+			<?php if($currentPage >= 2) { ?>
+			<li class="page-item"><a class="page-link" href="?page=<?php echo $previousPage ?>"><?php echo $previousPage ?></a></li>
+			<?php } ?>
+			<li class="page-item active"><a class="page-link" href="?page=<?php echo $currentPage ?>"><?php echo $currentPage ?></a></li>
+			<?php if($currentPage != $lastPage) { ?>
+			<li class="page-item"><a class="page-link" href="?page=<?php echo $nextPage ?>"><?php echo $nextPage ?></a></li>
+			<li class="page-item">
+			<a class="page-link" href="?page=<?php echo $lastPage ?>" aria-label="Next">
+			<span aria-hidden="true">Last</span>
+			</a>
+			</li>
+			<?php } ?>
+			</ul>
+			</nav>
+
+	<?php } ?>		
+
+
+
+
+
+
+		<ul class="pagination">
+			<?php
+				// if(!empty($row)) {
+			 //      	$limit=5;
+			 //      	$res = $wpdb->get_results("SELECT * FROM wp_franchises_order where franchise_id = '$franchise_id'");
+			 //        $row = count($res);
+				// 	$total_records = $row;
+				// 	if($total_records > $limit) {
+
+				// 		$total_pages = ceil($total_records / $limit);
+				// 		//echo $total_pages.'---kkk'.$pn;
+				// 		$k = (($pn+5>$total_pages)?$total_pages-5:(($pn-5<1)?5:$pn));
+				// 		$pagLink = "";
+
+
+				// 		//echo $k;
+
+				// 		if($pn>=2) {
+				// 			echo "<li><a href='?page=1'> << </a></li>";
+				// 			echo "<li><a href='?page=".($pn-1)."'> < </a></li>";
+				// 		}
+				// 		for ($i=4; $i<=5; $i++) {
+				// 		  if($k+$i==$pn)
+				// 			$pagLink .= "<li class='active'><a href='?page=".($k+$i)."'>".($k+$i)."</a></li>";
+				// 		  else
+				// 			$pagLink .= "<li><a href='?page=".($k+$i)."'>".($k+$i)."</a></li>";
+				// 		};
+				// 		echo $pagLink;
+				// 		if($pn<$total_pages) {
+				// 			echo "<li><a href='?page=".($pn+1)."'> > </a></li>";
+				// 			echo "<li><a href='?page=".$total_pages."'> >> </a></li>";
+				// 		}
+				// 	}
+				// }
+ 			?>
+      	</ul>
+     </div>
+</div>
+<?php
+get_footer();
+?>

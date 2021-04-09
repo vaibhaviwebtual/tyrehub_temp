@@ -1,0 +1,58 @@
+/*Single Product Page*/ 
+.woocommerce-tabs .tabs.wc-tabs{background-color: #f2f2f2;
+    padding: 10px 0px !important;} 
+.woocommerce-tabs .tabs.wc-tabs li{list-style:none;display: inline-block;margin: 0 20px;line-height: 45px;position: relative;}
+.woocommerce-tabs.wc-tabs-wrapper .tabs.wc-tabs li.active {
+    background: transparent;
+}
+.woocommerce .woocommerce-tabs .tabs.wc-tabs{
+    border-bottom: 1px solid #d3ced2;    
+}
+.woocommerce-tabs.wc-tabs-wrapper .tabs.wc-tabs li a {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+.woocommerce .woocommerce-tabs .tabs.wc-tabs li a:hover {
+    color: #373671;
+}	
+.tabs.wc-tabs > li > a::after {
+    height: 2px;
+}
+.tabs.wc-tabs > li:hover > a::after {
+    transform: scale(1);
+}
+.single-product .wc-tab  h2 {
+	display: none;	
+}
+.woocommerce .woocommerce-tabs .tabs.wc-tabs {
+    margin-bottom: 10px;
+}
+.woocommerce .woocommerce-tabs .panel {
+    padding: 20px 10px;
+    margin: 0px !important;
+}
+.woocommerce #review_form #respond .form-submit input[type="submit"] {
+    background-color: #2f3672;
+    color: #fff;
+}
+.woocommerce #review_form #respond .form-submit input[type="submit"]:hover {
+	color: #2f3672;
+}
+/*.woocommerce button.button.single_add_to_cart_button {
+	padding: 0px 35px;
+    height: 50px;
+}*/
+.related.products {
+    margin-top: 60px;
+	margin-bottom: 30px;
+}
+.related.products h2 {
+	text-transform: capitalize;
+}
+.woocommerce .products ul, .woocommerce ul.products {
+    padding: 0;
+    list-style: none outside;
+    clear: both;
+}
+/*Close Single Product Page*/

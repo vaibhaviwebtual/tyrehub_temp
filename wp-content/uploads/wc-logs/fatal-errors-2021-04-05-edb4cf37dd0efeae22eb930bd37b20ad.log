@@ -1,0 +1,12 @@
+2021-04-05T06:29:08+00:00 CRITICAL syntax error, unexpected 'die' (T_EXIT), expecting ')' in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 1172
+
+2021-04-05T09:22:44+00:00 CRITICAL syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 1171
+
+2021-04-05T09:22:47+00:00 CRITICAL syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in D:\xampp\htdocs\tyrehub_temp\wp-content\themes\demo\functions.php on line 1171
+
+2021-04-05T09:52:06+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\tyrehub_temp\wp-includes\Requests\Transport\cURL.php on line 163
+
+2021-04-05T10:31:11+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in D:\xampp\htdocs\tyrehub_temp\wp-includes\Requests\Transport\cURL.php on line 441
+
+2021-04-05T12:50:51+00:00 CRITICAL Out of memory (allocated 90177536) (tried to allocate 20480 bytes) in D:\xampp\htdocs\tyrehub_temp\wp-includes\functions.php on line 624
+

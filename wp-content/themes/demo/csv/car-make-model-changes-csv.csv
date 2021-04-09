@@ -1,0 +1,883 @@
+make_id,make_name,vehicle_type,model_id,model_name,make_rid,submodel_id,submodel_name,model_rid,tyre_size
+1,Ambassador,1,1,Ambassador,1,1,Avigo / Classic /Grand,1,165-80-15
+2,Ashok Leyland,1,2,Ashok Leyland Stile,2,14,Ashok Leyland Stile LE Diesel,2,165-0-14
+2,Ashok Leyland,1,2,Ashok Leyland Stile,2,15,Ashok Leyland Stile LS Diesel/LS 8 Seater Diesel,2,165-0-14
+2,Ashok Leyland,1,2,Ashok Leyland Stile,2,16,Ashok Leyland Stile LX Diesel/LX 8 Seater Diesel,2,165-0-14
+2,Ashok Leyland,1,2,Ashok Leyland Stile,2,19,Ashok Leyland Stile LX Optional Diesel,2,165-80-14
+4,Audi,1,11,Audi A3,4,51,Audi A3 Attraction 35 TDI,11,205-55-16
+4,Audi,1,11,Audi A3,4,52,Audi A3 Premium 35 TDI,11,205-55-16
+4,Audi,1,11,Audi A3,4,53,Audi A3 Premium Plus 35 TDI,11,225-45-17
+4,Audi,1,11,Audi A3,4,54,Audi A3 Premium Plus 40 TSFI,11,225-45-17
+4,Audi,1,11,Audi A3,4,55,Audi A3 Technology 35 TDI,11,225-45-17
+4,Audi,1,11,Audi A3,4,56,Audi A3 40TFSI prem plus Cabriolet,11,205-55-16
+4,Audi,1,11,Audi A3,4,57,Audi A3 40TFSI prem plus Cabriolet,11,225-45-17
+4,Audi,1,12,Audi A4,4,58,Audi A4 35 TDI Premium,12,225-55-16
+4,Audi,1,12,Audi A4,4,59,Audi A4 35 TDI Premium Sport,12,225-50-17
+4,Audi,1,12,Audi A4,4,60,Audi A4 35 TDI Technology Edition,12,225-50-17
+4,Audi,1,12,Audi A4,4,61,Audi A4 35 TSFI Premium,12,225-55-16
+4,Audi,1,12,Audi A4,4,62,New Audi A4 2.0 TDI Multitronic,12,225-55-16
+4,Audi,1,13,Audi A6,4,63,Audi A6 35 TDI Premium,13,225-55-17
+4,Audi,1,13,Audi A6,4,64,Audi A6 35 TDI Premium Plus,13,225-50-17
+4,Audi,1,13,Audi A6,4,65,Audi A6 35 TDI Technology,13,245-45-17
+4,Audi,1,13,Audi A6,4,66,Audi A6 40 TSFI Premium Plus,13,225-50-17
+4,Audi,1,13,Audi A6,4,67,Audi A6 S6,13,225-50-17
+4,Audi,1,14,Audi A7,4,68,Audi A7 2.8 FSI Quattro ,14,225-45-17
+4,Audi,1,14,Audi A7,4,69,Audi A7 3.0 TDI Quattro,14,225-45-18
+4,Audi,1,14,Audi A7,4,70,Audi A7 3.0 TDI,14,245-45-17
+4,Audi,1,14,Audi A7,4,71,Audi A7 3.0 TFSI Quattro,14,265-35-20
+4,Audi,1,14,Audi A7,4,72,Audi A7 2.8 FSI Quattro Sportback,14,245-45-17
+4,Audi,1,14,Audi A7,4,73,Audi A7 2.8 FSI Quattro Sportback,14,255-45-18
+4,Audi,1,14,Audi A7,4,74,Audi A7 3.0 TDI RS 7 sport back,14,265-35-18
+4,Audi,1,14,Audi A7,4,75,Audi A7 3.0 TDI RS 7 sport back,14,275-35-20
+4,Audi,1,15,Audi A8,4,76,Audi A8 L 3.0 TDI quattro,15,235-60-17
+4,Audi,1,15,Audi A8,4,77,Audi A8 L 60 TSFI quattro,15,235-55-18
+4,Audi,1,15,Audi A8,4,78,Audi A8 L W12 6.3 FSI Quattro,15,235-55-19
+4,Audi,1,15,Audi A8,4,79,Audi A8 L 3.0 50 TDI quattro,15,NULL
+4,Audi,1,16,Audi Q3,4,80,Audi Q3 2.0 TDI quattro base grade,16,215-65-16
+4,Audi,1,16,Audi Q3,4,81,Audi Q3 2.0 TDI quattro high grade,16,215-65-16
+4,Audi,1,16,Audi Q3,4,82,Audi Q3 35TDI Premium Plus,16,215-65-16
+4,Audi,1,17,Audi Q5,4,83,Audi Q5 2.0 TDI,17,235-65-17
+4,Audi,1,17,Audi Q5,4,84,Audi Q5 2.0 TFSI Quattro,17,235-65-17
+4,Audi,1,17,Audi Q5,4,85,Audi Q5 3.0 TDI Quattro,17,235-65-17
+4,Audi,1,17,Audi Q5,4,86,Audi Q5 45 TDI Quattro,17,235-60-18
+4,Audi,1,18,Audi Q7,4,87,Audi Q7 3.0 TDI quattro,18,255-55-18
+4,Audi,1,18,Audi Q7,4,88,Audi Q7 3.0 TFSI Quattro,18,255-55-18
+4,Audi,1,18,Audi Q7,4,89,Audi Q7 4.2 TDI quattro,18,255-55-18
+4,Audi,1,18,Audi Q7,4,90,Audi Q7 30TDI Premium,18,275-45-20
+4,Audi,1,18,Audi Q7,4,91,Audi Q7 30TDI Premium Plus,18,275-45-20
+4,Audi,1,18,Audi Q7,4,92,Audi Q7 30TDI Technology,18,275-45-20
+4,Audi,1,19,Audi R8,4,93,Audi R8 V10 Coupe,19,235-35-19
+4,Audi,1,19,Audi R8,4,94,Audi R8 V10 Coupe,19,295-30-19
+4,Audi,1,19,Audi R8,4,95,Audi R8 V10 Spyder,19,235-35-19
+4,Audi,1,19,Audi R8,4,96,Audi R8 V10 Spyder,19,295-30-19
+4,Audi,1,19,Audi R8,4,97,Audi R8 V10 Spyder Plus,19,235-35-19
+4,Audi,1,19,Audi R8,4,98,Audi R8 V10 Spyder Plus,19,295-30-19
+4,Audi,1,19,Audi R8,4,99,Audi R8 V8 Coupe,19,235-40-18
+4,Audi,1,19,Audi R8,4,100,Audi R8 V8 Coupe,19,285-35-18
+4,Audi,1,20,Audi RS5,4,101,Audi RS5 Coupe,20,265-35-19
+4,Audi,1,21,Audi RS7,4,102,Audi RS 7 Sportback,21,275-35-20
+4,Audi,1,22,Audi S4,4,103,Audi S4 V6 3.0 TFSI,22,245-40-18
+4,Audi,1,23,Audi S6,4,104,Audi S6 Saloon 4.0 TSFI quattro,23,255-40-19
+4,Audi,1,24,Audi TT,4,105,Audi TT 2.0 TFSI,24,245-45-17
+6,BMW,1,29,BMW 1 Series,6,118,BMW 1 Series ( 5 door )116i,29,205-55-16
+6,BMW,1,29,BMW 1 Series,6,119,BMW 1 Series ( 5 door )118d Sportsline,29,205-55-16
+6,BMW,1,29,BMW 1 Series,6,120,BMW 1 Series ( 5 door )118d Sportsplus,29,225-45-17
+6,BMW,1,29,BMW 1 Series,6,121,BMW 1 Series ( 5 door )118i,29,205-55-16
+6,BMW,1,30,BMW 3 Series,6,122,BMW 3 Series 320d,30,205-60-16
+6,BMW,1,30,BMW 3 Series,6,123,BMW 3 Series 320d Highline,30,225-50-16
+6,BMW,1,30,BMW 3 Series,6,124,BMW 3 Series 320d Luxury Line Plus ,30,225-50-17
+6,BMW,1,30,BMW 3 Series,6,125,BMW 3 Series 320d Luxury Line,30,225-50-17
+6,BMW,1,30,BMW 3 Series,6,126,BMW 3 Series 320d Sportsline,30,225-50-17
+6,BMW,1,30,BMW 3 Series,6,127,BMW 3 Series 320d,30,205-60-16
+6,BMW,1,30,BMW 3 Series,6,128,BMW 3 Series 320GT Luxury Line,30,225-50-18
+6,BMW,1,30,BMW 3 Series,6,129,BMW 3 Series 320i,30,225-50-16
+6,BMW,1,30,BMW 3 Series,6,130,BMW 3 Series 328i Sedan Sport Line ,30,225-45-18
+6,BMW,1,30,BMW 3 Series,6,131,BMW 3 Series 328i Sport Line ,30,225-45-17
+6,BMW,1,30,BMW 3 Series,6,132,BMW 3 Series 330d Convertible,30,225-45-17
+6,BMW,1,30,BMW 3 Series,6,133,BMW 3 Series 330i,30,225-45-17
+6,BMW,1,30,BMW 3 Series,6,134,BMW 3 Series 320d M Sport,30,225-40-18
+6,BMW,1,30,BMW 3 Series,6,135,BMW 3 Series 320d M Sport,30,225-45-18
+6,BMW,1,30,BMW 3 Series,6,136,BMW 3 Series 320d Prestige,30,225-55-16
+6,BMW,1,30,BMW 3 Series,6,137,BMW 3 Series 320i Luxury Line,30,225-50-17
+6,BMW,1,30,BMW 3 Series,6,138,BMW 3 Series 320i Prestige,30,225-55-16
+6,BMW,1,31,BMW 5 Series,6,139,BMW 5 Series 520 d,31,225-55-17
+6,BMW,1,31,BMW 5 Series,6,140,BMW 5 Series 520d Luxury line,31,245-45-18
+6,BMW,1,31,BMW 5 Series,6,141,BMW 5 Series 520d Modern line,31,245-45-18
+6,BMW,1,31,BMW 5 Series,6,142,BMW 5 Series 520i,31,225-55-17
+6,BMW,1,31,BMW 5 Series,6,143,BMW 5 Series 525d,31,225-55-17
+6,BMW,1,31,BMW 5 Series,6,144,BMW 5 Series 525d Luxury Line,31,245-45-18
+6,BMW,1,31,BMW 5 Series,6,145,BMW 5 Series 530d,31,225-55-17
+6,BMW,1,31,BMW 5 Series,6,146,BMW 5 Series 530d M Sport,31,245-45-18
+6,BMW,1,31,BMW 5 Series,6,147,BMW 5 Series 530d M Sport,31,275-40-18
+6,BMW,1,31,BMW 5 Series,6,148,BMW 5 Series 535i,31,225-55-17
+6,BMW,1,31,BMW 5 Series,6,149,BMW 5 Series 520d Prestige Plus,31,225-55-17
+6,BMW,1,31,BMW 5 Series,6,150,BMW 5 Series 520i Luxury Line,31,245-45-18
+6,BMW,1,32,BMW 6 Series,6,151,BMW 6 Series 640d Convertible,32,245-40-19
+6,BMW,1,32,BMW 6 Series,6,152,BMW 6 Series 640d Convertible,32,275-35-19
+6,BMW,1,32,BMW 6 Series,6,153,BMW 6 Series 640d Coupe,32,245-40-19
+6,BMW,1,32,BMW 6 Series,6,154,BMW 6 Series 640d Coupe,32,275-35-19
+6,BMW,1,32,BMW 6 Series,6,155,BMW 6 Series 650i Convertible,32,245-45-19
+6,BMW,1,32,BMW 6 Series,6,156,BMW 6 Series 650i Convertible,32,275-35-19
+6,BMW,1,32,BMW 6 Series,6,157,BMW 6 Series 650i Coupe,32,245-40-19
+6,BMW,1,32,BMW 6 Series,6,158,BMW 6 Series 650i Coupe,32,275-35-19
+6,BMW,1,32,BMW 6 Series,6,159,BMW 6 Series 640d DPE(Design Pure Experience),32,245-40-19
+6,BMW,1,32,BMW 6 Series,6,160,BMW 6 Series 640d DPE(Design Pure Experience),32,275-35-19
+6,BMW,1,32,BMW 6 Series,6,161,BMW 6 Series 640d Eminence,32,245-40-19
+6,BMW,1,32,BMW 6 Series,6,162,BMW 6 Series 640d Eminence,32,275-35-19
+6,BMW,1,32,BMW 6 Series,6,163,BMW 6 Series M6 Convertible,32,295-30-20
+6,BMW,1,32,BMW 6 Series,6,164,BMW 6 Series M6 Coupe,32,295-30-20
+6,BMW,1,32,BMW 6 Series,6,165,BMW 6 Series M6 Gran Coupe,32,275-35-19
+6,BMW,1,33,BMW 7 Series,6,166,BMW 7 Series 730Ld,33,245-50-18
+6,BMW,1,33,BMW 7 Series,6,167,BMW 7 Series 740Li,33,245-50-18
+6,BMW,1,33,BMW 7 Series,6,168,BMW 7 Series 750Li,33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,169,BMW 7 Series 750Li,33,275-40-19
+6,BMW,1,33,BMW 7 Series,6,170,BMW 7 Series 760Li,33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,171,BMW 7 Series 760Li,33,275-40-19
+6,BMW,1,33,BMW 7 Series,6,172,BMW 7 Series 730LD DPE (CBU),33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,173,BMW 7 Series 730LD DPE (CBU),33,275-40-19
+6,BMW,1,33,BMW 7 Series,6,174,BMW 7 Series 730LD DPE Signature,33,245-50-18
+6,BMW,1,33,BMW 7 Series,6,175,BMW 7 Series 730LD DPE(Design Pure Experience),33,245-50-18
+6,BMW,1,33,BMW 7 Series,6,176,BMW 7 Series 730LD M Sport,33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,177,BMW 7 Series 730LD M Sport,33,275-40-19
+6,BMW,1,33,BMW 7 Series,6,178,BMW 7 Series 740Li DPE Signature,33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,179,BMW 7 Series 740Li DPE Signature,33,275-40-19
+6,BMW,1,33,BMW 7 Series,6,180,BMW 7 Series 750Li M Sport,33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,181,BMW 7 Series 750Li M Sport,33,275-40-19
+6,BMW,1,33,BMW 7 Series,6,182,BMW 7 Series Active Hybrid,33,245-45-19
+6,BMW,1,33,BMW 7 Series,6,183,BMW 7 Series Active Hybrid,33,275-40-19
+6,BMW,1,34,BMW Gran Turismo,6,184,BMW Gran Turismo 3.0L Diesel,34,245-50-18
+6,BMW,1,34,BMW Gran Turismo,6,185,BMW Gran Turismo 320d GT Luxury Line,34,225-50-18
+6,BMW,1,34,BMW Gran Turismo,6,186,BMW Gran Turismo 320d GT Sport Line,34,225-50-18
+6,BMW,1,34,BMW Gran Turismo,6,187,BMW Gran Turismo 330i GT Luxury Line,34,225-50-18
+6,BMW,1,35,BMW i8,6,188,BMW i8 Hybrid Petrol,35,195-50-20
+6,BMW,1,35,BMW i8,6,189,BMW i8 1.5 Hybrid,35,245-40-20
+6,BMW,1,35,BMW i8,6,190,BMW i8 1.5 Hybrid,35,275-40-19
+6,BMW,1,36,BMW M Series,6,191,BMW M Series M3 Convertible,36,245-40-18
+6,BMW,1,36,BMW M Series,6,192,BMW M Series M3 Coupe,36,245-40-18
+6,BMW,1,36,BMW M Series,6,193,BMW M Series M3 Sedan,36,255-40-18
+6,BMW,1,36,BMW M Series,6,194,BMW M Series M3 Sedan,36,275-40-18
+6,BMW,1,36,BMW M Series,6,195,BMW M Series M4 Coupe,36,255-40-18
+6,BMW,1,36,BMW M Series,6,196,BMW M Series M4 Coupe,36,275-40-18
+6,BMW,1,36,BMW M Series,6,197,BMW M Series M5 Sedan,36,275-40-19
+6,BMW,1,36,BMW M Series,6,198,BMW M Series M6 Convertible,36,255-40-19
+6,BMW,1,36,BMW M Series,6,199,BMW M Series M6 Gran Coupe Petrol,36,265-35-20
+6,BMW,1,36,BMW M Series,6,200,BMW M Series M6 Gran Coupe Petrol,36,295-30-20
+6,BMW,1,37,BMW X1,6,201,BMW X1 sDrive 18i,37,225-50-17
+6,BMW,1,37,BMW X1,6,202,BMW X1 sDrive 20d Exclusive,37,225-50-17
+6,BMW,1,37,BMW X1,6,203,BMW X1 sDrive 20d Sportsline,37,225-50-17
+6,BMW,1,37,BMW X1,6,204,BMW X1 sDrive20d,37,225-50-17
+6,BMW,1,37,BMW X1,6,205,BMW X1 sDrive 20d Expedition,37,225-55-17
+6,BMW,1,37,BMW X1,6,206,BMW X1 sDrive 20d xLine,37,225-50-18
+6,BMW,1,37,BMW X1,6,207,BMW X1 xDrive 20d M Sport,37,225-50-18
+6,BMW,1,37,BMW X1,6,208,BMW X1 xDrive 20d xLine,37,225-50-18
+6,BMW,1,38,BMW X3,6,209,BMW X3 xDrive20d,38,235-55-17
+6,BMW,1,38,BMW X3,6,210,BMW X3 xDrive30d,38,245-50-18
+6,BMW,1,38,BMW X3,6,211,BMW X1 xDrive 30d M Sport,38,245-45-19
+6,BMW,1,38,BMW X3,6,212,BMW X1 xDrive 30d M Sport,38,275-40-19
+6,BMW,1,38,BMW X3,6,213,BMW X3 xDrive 20d Expedition,38,225-60-17
+6,BMW,1,38,BMW X3,6,214,BMW X3 xDrive 20d xLine,38,245-50-18
+6,BMW,1,38,BMW X3,6,215,BMW X3 xDrive 28i xLine,38,245-50-18
+6,BMW,1,39,BMW X5,6,216,BMW X5 xDrive 30d,39,255-55-18
+6,BMW,1,39,BMW X5,6,217,BMW X5 xDrive 50i,39,255-55-18
+6,BMW,1,39,BMW X5,6,218,BMW X5 xDrive 35i DPE(Design Pure Experience),39,255-50-19
+6,BMW,1,39,BMW X5,6,219,BMW X5 xDrive30d Design Pure Experience,39,255-50-19
+6,BMW,1,39,BMW X5,6,220,BMW X5 xDrive30d Design Pure Experience (7 Seater),39,255-50-19
+6,BMW,1,39,BMW X5,6,221,BMW X5 xDrive30d Expedition,39,255-55-18
+6,BMW,1,39,BMW X5,6,222,BMW X5 xDrive30d M Sport,39,255-50-19
+6,BMW,1,39,BMW X5,6,223,BMW X5 xDrive30d M Sport,39,285-45-19
+6,BMW,1,40,BMW X6,6,224,BMW X6 M,40,275-40-20
+6,BMW,1,40,BMW X6,6,225,BMW X6 M,40,315-35-20
+6,BMW,1,40,BMW X6,6,226,BMW X6 xDrive30d,40,255-50-19
+6,BMW,1,40,BMW X6,6,227,BMW X6 xDrive50i,40,255-50-19
+6,BMW,1,40,BMW X6,6,228,BMW X6 xDrive40d,40,275-40-20
+6,BMW,1,40,BMW X6,6,229,BMW X6 xDrive40d,40,315-35-20
+6,BMW,1,40,BMW X6,6,230,BMW X6 xDrive40d M Sport,40,255-50-19
+6,BMW,1,40,BMW X6,6,231,BMW X6 xDrive40d M Sport,40,285-45-19
+6,BMW,1,41,BMW Z4,6,232,BMW Z4 35i,41,225-40-18
+6,BMW,1,41,BMW Z4,6,233,BMW Z4 35i,41,255-35-18
+6,BMW,1,41,BMW Z4,6,234,BMW Z4 35i Priestage,41,225-40-18
+6,BMW,1,41,BMW Z4,6,235,BMW Z4 35i Priestage,41,255-35-18
+6,BMW,1,41,BMW Z4,6,236,BMW Z4 SDrive 35i Design pure,41,225-40-18
+6,BMW,1,41,BMW Z4,6,237,BMW Z4 SDrive 35i Design pure,41,255-35-18
+6,BMW,1,42,BMW Z4 Roadster,6,238,BMW Z4 Roadster sDrive 35i,42,225-40-18
+6,BMW,1,42,BMW Z4 Roadster,6,239,BMW Z4 Roadster sDrive 35i,42,255-35-18
+6,BMW,1,42,BMW Z4 Roadster,6,240,BMW Z4 Roadster sDrive35i DPT,42,225-40-18
+6,BMW,1,42,BMW Z4 Roadster,6,241,BMW Z4 Roadster sDrive35i DPT,42,255-35-18
+8,Chevrolet,1,44,Chevrolet Aveo,8,243,Chevrolet Aveo 1.4,44,185-60-14
+8,Chevrolet,1,44,Chevrolet Aveo,8,251,Chevrolet Aveo U VA 1.2 LS,44,155-80-13
+8,Chevrolet,1,46,Chevrolet Beat,8,253,"Beat Diesel (LS/ LT/LT Option/PS) 
+
+",46,165-65-14
+8,Chevrolet,1,46,Chevrolet Beat,8,257,Beat LS/Beat LS LPG,46,155-70-14
+8,Chevrolet,1,46,Chevrolet Beat,8,258,Beat LT/Beat LT LPG,46,155-70-14
+8,Chevrolet,1,46,Chevrolet Beat,8,259,Beat Option Pack/Beat PS,46,155-70-14
+8,Chevrolet,1,47,Chevrolet Captiva,8,263,Chevrolet Captiva 2.0 MT / Xtreme,47,235-60-17
+8,Chevrolet,1,47,Chevrolet Captiva,8,265,Chevrolet Captiva 2.2 AT AWD,47,235-65-17
+8,Chevrolet,1,48,Chevrolet Cruze,8,266,Chevrolet Cruze LT /LTZ/ LTZ AT,48,205-60-16
+8,Chevrolet,1,49,Chevrolet Enjoy/Sail/Sail Hatchback,8,269,Petrol/Diesel,49,175-70-14
+8,Chevrolet,1,50,Chevrolet Optra Magnum,8,281,Diesel/Petrol,50,195-60-15
+8,Chevrolet,1,53,Chevrolet Spark,8,305,Chevrolet Spark 1.0 /LS / LT,53,155-70-13
+8,Chevrolet,1,54,Chevrolet Spark LPG,8,308,Chevrolet Spark LPG 1.0 LS / LT,54,155-70-13
+8,Chevrolet,1,55,Chevrolet Tavera Neo,8,310,Chevrolet Tavera Neo Diesel/Petrol,55,205-65-15
+8,Chevrolet,1,56,Chevrolet Trailblazer,8,329,Chevrolet Trailblazer LTZ AT,56,265-60-18
+9,Datsun,1,57,Datsun GO/ GO+ (GO Plus),9,330,Datsun A/D/D1/T,57,155-70-13
+9,Datsun,1,57,Datsun GO/ GO+ (GO Plus),9,331,Datsun Go/Go+ A EPS,57,155-70-13
+9,Datsun,1,57,Datsun GO/ GO+ (GO Plus),9,332,Datsun Go/GO+ Style Edition,57,155-70-13
+9,Datsun,1,57,Datsun GO/ GO+ (GO Plus),9,333,Datsun Go/GO+ T(O),57,155-70-13
+9,Datsun,1,58,Datsun Go Plus,9,NULL,NULL,NULL,NULL
+9,Datsun,1,59,Datsun GO+,9,NULL,NULL,NULL,NULL
+9,Datsun,1,60,Datsun Redi-Go,9,344,Datsun Redi-Go A/Go D/Go S/Go T,60,155-80-13
+9,Datsun,1,60,Datsun Redi-Go,9,345,Datsun Redi-Go Sport,60,155-80-13
+9,Datsun,1,60,Datsun Redi-Go,9,346,Datsun Redi-Go T(O),60,155-80-13
+11,Fiat,1,69,Fiat Avventura,11,363,Avventura Dynamic/Fire Dynamic/Fire Active,69,205-55-16
+11,Fiat,1,69,Fiat Avventura,11,364,Fiat Avventura Multijet Active ( Diesel),69,205-55-16
+11,Fiat,1,69,Fiat Avventura,11,365,Fiat Avventura Multijet Emotion ( Diesel),69,205-55-16
+11,Fiat,1,70,Fiat Grande Punto,11,369,Grande Punto Active/Dynamic,70,165-80-14
+11,Fiat,1,70,Fiat Grande Punto,11,370,Grande Punto Fiat Grande Punto,70,165-80-14
+11,Fiat,1,70,Fiat Grande Punto,11,371,Grande Punto 1.3/1.4 Emotion ,70,175-70-14
+11,Fiat,1,70,Fiat Grande Punto,11,372,Grande Punto Sport,70,195-60-15
+11,Fiat,1,70,Fiat Grande Punto,11,374,Grande Punto EVO Active/ EVO Dynamic,70,165-80-14
+11,Fiat,1,70,Fiat Grande Punto,11,376,Grande Punto 1.3 Emotion Pack 90HP (Diesel),70,195-60-15
+11,Fiat,1,70,Fiat Grande Punto,11,382,Punto EVO 1.3 Emotion (Diesel),70,195-60-15
+11,Fiat,1,70,Fiat Grande Punto,11,383,Punto EVO Emotion 1.4 ( Petrol),70,195-60-15
+11,Fiat,1,71,Fiat Linea,11,387,Linea Classic 1.4/Classic 1.3 Multjiet,71,175-70-14
+11,Fiat,1,71,Fiat Linea,11,389,Fiat Linea Classic Plus 1.3 Multijet (Diesel),71,175-70-14
+11,Fiat,1,71,Fiat Linea,11,390,Linea Active/Dynamic/Emotion/T JET,71,195-60-15
+11,Fiat,1,71,Fiat Linea,11,394,Linea T Jet Emotion/Jet Plus,71,205-55-16
+11,Fiat,1,72,Fiat 500,11,396,Fiat Abarth 595 Competizione,72,205-40-17
+11,Fiat,1,73,Fiat Abarth Punto,11,397,Fiat Abarth Punto Active Fire Petrol,73,195-55-16
+11,Fiat,1,74,Fiat Punto Pure,11,398,Fiat Punto Pure Active Active Petrol,74,165-80-14
+11,Fiat,1,74,Fiat Punto Pure,11,399,Fiat Punto Pure Active Advanced Multijet Diesel,74,165-80-14
+11,Fiat,1,75,Fiat Urban Cross,11,400,Urban Cross Active /Dynamic/Emotion/ T-JET,75,205-55-16
+12,Force,1,76,Force One,12,404,Traveller/Delivery van/Schoolbus/Toofan (Diesel),76,235-70-16
+12,Force,1,76,Force One,12,405,Force Gurkha 4 x 4/Force One LX 4x4 (Diesel),76,245-70-16
+12,Force,1,77,"Delivery van/Schoolbus/Toofan
+
+
+
+
+
+
+
+",12,412,"Diesel
+",77,215-75-15
+12,Force,1,78,"Trump 40/Hi-Deck
+
+
+
+",12,413,Diesel/CNG,78,215-75-15
+12,Force,1,79,Trax,12,414,"Trax Gama Classic
+",79,215-75-15
+12,Force,1,79,Trax,12,416,Trax / Trax Cruiser,79,7.00-0-15
+12,Force,1,79,Trax,12,417,Trax Cargo King,79,7.00-0-16
+12,Force,1,80,Traveller ,12,415,Traveller,80,215-75-15
+12,Force,1,80,Traveller ,12,427,Traveller Shaktiman 200,80,215-75-15
+12,Force,1,101,Trax Cruiser,12,436,Trax Cruiser,101,215-75-15
+12,Force,1,102,Trax Gama Classic,12,437,Trax Gama Classic,102,215-75-15
+12,Force,1,103,Trax Toofan,12,438,Trax Toofan,103,215-75-15
+12,Force,1,104,Trump,12,439,Trump,104,215-75-15
+12,Force,1,105,Trump 40,12,440,Trump 40,105,215-75-15
+12,Force,1,106,Trump 40 CNG Hi-Deck,12,441,Trump 40 CNG Hi-Deck,106,215-75-15
+12,Force,1,107,Trump 40 Hi-Deck,12,442,Trump 40 Hi-Deck,107,215-75-15
+13,Ford,1,108,Ford Classic,13,443,Petrol/Diesel,108,175-65-14
+13,Ford,1,109,Ford Endeavour,13,449,Petrol/Diesel,109,245-70-16
+13,Ford,1,110,Ford Fiesta,13,453,Petrol/Diesel,110,195-60-15
+13,Ford,1,111,Ford Figo,13,459,Petrol/Diesel,111,175-65-14
+13,Ford,1,112,Ford EcoSport,13,467,Petrol/Diesel,112,205-60-16
+13,Ford,1,113,Ford Figo Aspire,13,475,Petrol/Diesel,113,175-65-14
+13,Ford,1,114,Ford Mustang,13,480,Ford Mustang GT Fastback 5.0 AT,114,275-40-19
+14,Honda,1,115,Honda Amaze,14,481,"Petrol/Diesel/CNG
+",115,175-65-14
+14,Honda,1,116,Honda Brio,14,497,Petrol/Diesel,116,175-65-14
+14,Honda,1,117,Honda City,14,509,Petrol/Diesel,117,175-65-15
+14,Honda,1,118,Honda Civic,14,526,"Honda Civic 1.8 S (MT/AT/Sunroof) 
+
+
+
+",118,195-65-15
+14,Honda,1,118,Honda Civic,14,527,Honda Civic 1.8 V (MT/AT/Sunroof),118,195-65-15
+14,Honda,1,119,Honda CR-V,14,531,Honda CR V All,119,225-65-17
+14,Honda,1,120,Honda Jazz,14,539,Honda Jazz E,120,175-70-14
+14,Honda,1,120,Honda Jazz,14,540,Honda Jazz S,120,175-70-14
+14,Honda,1,120,Honda Jazz,14,541,Honda Jazz SV,120,175-70-14
+14,Honda,1,120,Honda Jazz,14,546,Honda Jazz Basic/Jazz Select Edition,120,175-65-15
+14,Honda,1,120,Honda Jazz,14,547,Honda Jazz X,120,175-65-15
+14,Honda,1,120,Honda Jazz,14,548,Honda Jazz V,120,175-65-15
+14,Honda,1,120,Honda Jazz,14,549,Honda Jazz VX,120,175-65-15
+14,Honda,1,121,Honda Mobilio,14,551,Petrol/Diesel,121,185-65-15
+14,Honda,1,122,Honda New Accord,14,561,Honda New Accord 2.4 AT/MT,122,215-60-16
+14,Honda,1,122,Honda New Accord,14,563,Honda New Accord 3.5 V6,122,225-50-17
+14,Honda,1,123,Honda Accord,14,564,Honda Accord Hybrid,123,215-60-16
+14,Honda,1,124,Honda BR-V,14,565,Petrol/Diesel,124,195-60-16
+15,Hyundai,1,125,Hyundai Elite i20,15,574,Hyundai Elite i20 Asta 1.2 (P) / 1.4 CRDi (D),125,195-55-16
+15,Hyundai,1,125,Hyundai Elite i20,15,575,Hyundai Elite i20 Sportz 1.2 (Petrol)/ 1.4 CRDi ( Diesel),125,185-70-14
+15,Hyundai,1,125,Hyundai Elite i20,15,579,Hyundai Elite i20 Magna,125,185-70-14
+15,Hyundai,1,125,Hyundai Elite i20,15,582,Hyundai Elite i20 Sportz Option 1.2 (P) / 1.4 CRDi (D),125,195-55-16
+15,Hyundai,1,125,Hyundai Elite i20,15,583,"Hyundai Elite 1.4 CRDI Asta 
+(P)
+
+",125,185-70-14
+15,Hyundai,1,125,Hyundai Elite i20,15,585,Hyundai Elite i20 active CRDi / CRDi S/ CRDi SX,125,185-70-14
+15,Hyundai,1,125,Hyundai Elite i20,15,2442,Hyundai Elite i20 Era 1.4 CRDi ( Diesel),125,185-70-14
+15,Hyundai,1,125,Hyundai Elite i20,15,2443,"Hyundai Elite i20 Era1.2 (Petrol)
+",125,185-70-14
+15,Hyundai,1,126,Hyundai Grand i10,15,588,Petrol/Diesel/LPG,126,165-65-14
+15,Hyundai,1,127,Hyundai Creta,15,601,Creta 1.4 Base/S/S Plus,127,205-65-16
+15,Hyundai,1,127,Hyundai Creta,15,604,Creta 1.6 E Petrol/ E Plus Petrol,127,205-65-16
+15,Hyundai,1,127,Hyundai Creta,15,606,Creta 1.6 S Plus AT,127,215-60-17
+15,Hyundai,1,127,Hyundai Creta,15,607,Creta 1.6 SX / SX Plus,127,205-65-16
+15,Hyundai,1,127,Hyundai Creta,15,608,Creta 1.6 SX (O),127,215-60-17
+15,Hyundai,1,127,Hyundai Creta,15,610,Creta 1.6 SX Plus AT,127,215-60-17
+15,Hyundai,1,127,Hyundai Creta,15,612,Creta 1.6 SX Plus Petrol /SE,127,205-65-16
+15,Hyundai,1,127,Hyundai Creta,15,614,Creta 1.6 SX Plus Special Edition,127,215-60-17
+15,Hyundai,1,128,Hyundai Accent,15,615,Accent Executive,128,175-70-13
+15,Hyundai,1,128,Hyundai Accent,15,616,Accent Executive LPG,128,175-70-13
+15,Hyundai,1,128,Hyundai Accent,15,617,Accent Viva,128,185-60-14
+15,Hyundai,1,129,Hyundai Elantra Neo Fluidic,15,618,Petrol/Diesel,129,205-60-16
+15,Hyundai,1,130,Hyundai EON,15,625,EON Kappa Magna Plus,130,155-70-13
+15,Hyundai,1,130,Hyundai EON,15,627,EON D Lite Plus,130,145-80-12
+15,Hyundai,1,130,Hyundai EON,15,628,EON D Lite( Petrol),130,145-80-12
+15,Hyundai,1,130,Hyundai EON,15,629,EON Era Plus,130,145-80-12
+15,Hyundai,1,130,Hyundai EON,15,630,EON Era Plus LPG,130,145-80-12
+15,Hyundai,1,130,Hyundai EON,15,631,EON LPG D Lite Plus,130,145-80-12
+15,Hyundai,1,130,Hyundai EON,15,632,EON LPG Era Plus,130,145-80-12
+15,Hyundai,1,130,Hyundai EON,15,633,EON LPG Magna Plus,130,155-70-13
+15,Hyundai,1,130,Hyundai EON,15,634,EON Magna Plus,130,155-70-13
+15,Hyundai,1,130,Hyundai EON,15,635,EON Sportz,130,155-70-13
+15,Hyundai,1,131,Hyundai Getz,15,636,Getz 1.5i CRDi (Diesel),131,175-65-14
+15,Hyundai,1,131,Hyundai Getz,15,637,Getz Prime 1.1i,131,155-80-13
+15,Hyundai,1,131,Hyundai Getz,15,638,Getz Prime 1.3 GVS,131,175-70-13
+15,Hyundai,1,131,Hyundai Getz,15,639,Getz Prime 1.3i,131,175-65-14
+15,Hyundai,1,131,Hyundai Getz,15,640,Getz Prime 1.6i,131,175-65-14
+15,Hyundai,1,132,Hyundai i10,15,641,i10 Asta / Sportz/ Era/ Magna /D Lite,132,155-80-13
+15,Hyundai,1,132,Hyundai i10,15,644,i10 Diesel ,132,165-65-14
+15,Hyundai,1,133,Hyundai i20,15,653,Petrol/Diesel,133,175-70-14
+15,Hyundai,1,134,Hyundai Santa Fe,15,665,Santa Fe Petrol/Diesel,134,235-60-18
+15,Hyundai,1,135,Hyundai Santro Xing,15,668,Santro Xing,135,155-70-13
+15,Hyundai,1,136,Hyundai Sonata Transform,15,674,Sonata 2.4 GDi AT/MT,136,215-55-17
+15,Hyundai,1,137,Hyundai Verna,15,679,Verna Fluidic 1.6 CRDi EX,137,185-65-15
+15,Hyundai,1,137,Hyundai Verna,15,682,Verna Fluidic 1.6 SX CRDI/ CRDI(O)/VTVT(O)/SX AT,137,195-55-16
+15,Hyundai,1,137,Hyundai Verna,15,685,Verna Fluidic 1.4 EX/CRDI/VTVT,137,185-65-15
+15,Hyundai,1,137,Hyundai Verna,15,687,Verna Old,137,175-70-14
+15,Hyundai,1,138,Hyundai Xcent,15,689,Xcent 1.1 Petrol/Diesel,138,165-65-14
+15,Hyundai,1,139,Hyundai Tucson,15,711,Petrol/Diesel,139,225-60-17
+17,Isuzu,1,141,Isuzu D-Max,17,732,Isuzu D-Max V-Cross 4x4,141,245-70-16
+17,Isuzu,1,142,Isuzu MU- 7,17,733,Isuzu MU- 7,142,245-70-16
+17,Isuzu,1,143,Isuzu MU7,17,734,Isuzu MU7 All,143,245-70-16
+21,Land Rover,1,154,Land Rover Discovery 4,21,775,Land Rover Discovery 4 SDV6 SE,154,255-55-19
+21,Land Rover,1,154,Land Rover Discovery 4,21,776,Land Rover Discovery 4 TDV6 Auto Diesel,154,255-55-19
+21,Land Rover,1,154,Land Rover Discovery 4,21,777,Land Rover Discovery 4 3.0 V6 HSE,154,255-55-19
+21,Land Rover,1,155,Land Rover Freelander 2,21,778,Land Rover Freelander 2 HSE,155,235-65-17
+21,Land Rover,1,155,Land Rover Freelander 2,21,779,Land Rover Freelander 2 HSE ( Diesel),155,235-65-17
+21,Land Rover,1,155,Land Rover Freelander 2,21,780,Land Rover Freelander 2 S Business Edition( Diesel),155,235-65-17
+21,Land Rover,1,155,Land Rover Freelander 2,21,781,Land Rover Freelander 2 SE,155,235-65-17
+21,Land Rover,1,155,Land Rover Freelander 2,21,782,Land Rover Freelander 2 SE( Diesel),155,235-65-17
+21,Land Rover,1,155,Land Rover Freelander 2,21,783,Land Rover Freelander 2 Sterling Edition ( Diesel),155,235-65-17
+21,Land Rover,1,156,Land Rover Range Rover,21,784,Land Rover Range Rover Supercharged V8 (Petrol),156,NULL
+21,Land Rover,1,156,Land Rover Range Rover,21,785,Land Rover Range Rover TDV8 (Diesel),156,255-55-19
+21,Land Rover,1,156,Land Rover Range Rover,21,786,Land Rover Range Rover 3.0 TDV6 HSE,156,235-70-16
+21,Land Rover,1,156,Land Rover Range Rover,21,787,Land Rover Range Rover 3.0 TDV6 VOGUE,156,235-70-16
+21,Land Rover,1,156,Land Rover Range Rover,21,788,Land Rover Range Rover 3.0 V6 HSE,156,NULL
+21,Land Rover,1,156,Land Rover Range Rover,21,789,Land Rover Range Rover 4.4 SDV8 Autobiography,156,235-70-16
+21,Land Rover,1,156,Land Rover Range Rover,21,790,Land Rover Range Rover 4.4 SDV8 SE,156,235-70-16
+21,Land Rover,1,156,Land Rover Range Rover,21,791,Land Rover Range Rover 5.0 V8 SC Auto biography,156,NULL
+21,Land Rover,1,157,Land Rover Range Rover Evoque,21,792,Land Rover Range Rover Evoque 2.0L Dynamic,157,NULL
+21,Land Rover,1,157,Land Rover Range Rover Evoque,21,793,Land Rover Range Rover Evoque 2.2L Dynamic,157,NULL
+21,Land Rover,1,157,Land Rover Range Rover Evoque,21,794,Land Rover Range Rover Evoque 2.2L Prestige,157,NULL
+21,Land Rover,1,157,Land Rover Range Rover Evoque,21,795,Land Rover Range Rover Evoque 2.2L Pure,157,NULL
+21,Land Rover,1,158,Land Rover Range Rover Sport,21,796,Land Rover Range Rover Sport Supercharged V8 (Petrol),158,NULL
+21,Land Rover,1,158,Land Rover Range Rover Sport,21,797,Land Rover Range Rover Sport TDV6,158,NULL
+21,Land Rover,1,159,Land Rover Discovery Sport,21,798,Land Rover Discovery Sport HSE,159,235-65-17
+21,Land Rover,1,159,Land Rover Discovery Sport,21,799,Land Rover Discovery Sport HSE 7-Seater,159,235-65-17
+21,Land Rover,1,159,Land Rover Discovery Sport,21,800,Land Rover Discovery Sport HSE Luxury,159,235-60-18
+21,Land Rover,1,159,Land Rover Discovery Sport,21,801,Land Rover Discovery Sport HSE Luxury 7-Seater,159,235-60-18
+21,Land Rover,1,159,Land Rover Discovery Sport,21,802,Land Rover Discovery Sport HSE Petrol 7-Seater,159,235-60-18
+21,Land Rover,1,159,Land Rover Discovery Sport,21,803,Land Rover Discovery Sport S,159,235-65-17
+21,Land Rover,1,159,Land Rover Discovery Sport,21,804,Land Rover Discovery Sport SE,159,235-65-17
+21,Land Rover,1,159,Land Rover Discovery Sport,21,805,Land Rover Discovery Sport SE 7-Seater,159,235-65-17
+22,Mahindra,1,160,Mahindra Bolero,22,806,Mahindra Bolero ALL,160,215-75-15
+22,Mahindra,1,161,Mahindra Logan,22,818,Mahindra Logan,161,185-70-14
+22,Mahindra,1,162,Mahindra Quanto,22,819,Mahindra Quanto (Diesel),162,205-65-15
+22,Mahindra,1,163,Mahindra Scorpio,22,823,Mahindra Scorpio SLE/EX/EX BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,825,Mahindra Scorpio Old,163,235-75-15
+22,Mahindra,1,163,Mahindra Scorpio,22,826,Mahindra Scorpio Getaway / 4WD,163,245-75-16
+22,Mahindra,1,163,Mahindra Scorpio,22,827,Mahindra Scorpio LX / LX 4X4,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,830,Mahindra Scorpio M2DI,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,831,Mahindra Scorpio old,163,235-75-15
+22,Mahindra,1,163,Mahindra Scorpio,22,834,Mahindra Scorpio S10 7/8 Seater (Diesel),163,235-65-17
+22,Mahindra,1,163,Mahindra Scorpio,22,836,Mahindra Scorpio S2 7/9 Seater (Diesel),163,215-75-15
+22,Mahindra,1,163,Mahindra Scorpio,22,837,Mahindra Scorpio S4/S4 Plus (Diesel),163,235-65-17
+22,Mahindra,1,163,Mahindra Scorpio,22,841,Mahindra Scorpio S6 / S6 Plus (Diesel),163,235-65-17
+22,Mahindra,1,163,Mahindra Scorpio,22,845,Mahindra Scorpio S8 (Diesel),163,235-65-17
+22,Mahindra,1,163,Mahindra Scorpio,22,849,Mahindra Scorpio Sle BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,850,Mahindra Scorpio Vlx,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,851,Mahindra Scorpio VLX 4WD,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,852,Mahindra Scorpio VLX 4WD Air bag,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,853,Mahindra Scorpio VLX 4WD Airbag BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,854,Mahindra Scorpio VLX 4WD BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,855,Mahindra Scorpio Vlx Air bag,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,856,Mahindra Scorpio VLX Airbag BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,857,Mahindra Scorpio Vlx AT,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,858,Mahindra Scorpio VLX AT 2WD BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,859,Mahindra Scorpio VLX AT 4WD,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,860,Mahindra Scorpio VlX AT 4WD Airbag,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,861,Mahindra Scorpio Vlx AT 4WD Airbag BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,862,Mahindra Scorpio VLX AT 4WD BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,863,Mahindra Scorpio VLX AT Airbag,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,864,Mahindra Scorpio VLX AT Airbag BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,865,Mahindra Scorpio Vlx AT BSIII,163,235-70-16
+22,Mahindra,1,163,Mahindra Scorpio,22,866,Mahindra Scorpio VLX BSIII / LX BSIII,163,235-70-16
+22,Mahindra,1,164,Mahindra Thar,22,867,Mahindra Thar All,164,235-70-16
+22,Mahindra,1,165,Mahindra Verito / Verito Vibe,22,870,"Mahindra Verito/Verito Vibe
+",165,185-70-14
+22,Mahindra,1,166,Mahindra XUV500,22,880,Mahindra XUV 500 ALL,166,235-65-17
+22,Mahindra,1,167,Mahindra Xylo,22,884,Mahindra Xylo D2 / BS III,167,205-65-15
+22,Mahindra,1,167,Mahindra Xylo,22,886,Mahindra Xylo D4,167,205-65-15
+22,Mahindra,1,167,Mahindra Xylo,22,888,Mahindra Xylo E4,167,215-75-15
+22,Mahindra,1,167,Mahindra Xylo,22,896,Mahindra Xylo E9 / E8,167,215-75-15
+22,Mahindra,1,167,Mahindra Xylo,22,897,Mahindra Xylo D4 BS III,167,215-75-15
+22,Mahindra,1,167,Mahindra Xylo,22,899,Mahindra Xylo H4/ H8 / H9 ( Diesel),167,215-75-15
+22,Mahindra,1,168,Mahindra Getaway,22,902,Mahindra Bolero Getaway 4WD,168,235-75-15
+22,Mahindra,1,168,Mahindra Getaway,22,903,Mahindra Getaway 2WD,168,235-75-15
+22,Mahindra,1,169,Mahindra Bolero Maxi Truck Plus,22,904,Mahindra Bolero Maxi Truck Plus,169,195-80-15
+22,Mahindra,1,170,Mahindra Camper,22,906,Mahindra Camper 2WD / 4WD / Gold VX,170,235-75-15
+22,Mahindra,1,171,Mahindra e2o (Electric Vehicle),22,909,Mahindra e2o P2/P4/P6/P8 (Electric Vehicle),171,165-60-14
+22,Mahindra,1,172,Mahindra eSupro (Electric Vehicle),22,913,Mahindra eSupro LX / VX / ZX (Electric Vehicle),172,155-80-13
+22,Mahindra,1,173,Mahindra Imperio,22,916,Petrol/Diesel,173,155-80-13
+22,Mahindra,1,174,Mahindra Jeeto,22,920,Jeeto All Petrol/Diesel,174,145-80-12
+22,Mahindra,1,175,Mahindra KUV100,22,928,Mahindra KUV100 K2/K4/K6/K8 (Petrol / Diesel),175,185-65-14
+22,Mahindra,1,176,Mahindra Maxximo,22,935,Mahindra Maxximo Plus,176,145-80-12
+22,Mahindra,1,177,Mahindra NuvoSport,22,936,Mahindra NuvoSport All,177,215-65-16
+22,Mahindra,1,178,Mahindra Ssangyong Rexton,22,942,Petrol/Diesel,178,235-70-16
+22,Mahindra,1,180,Mahindra Supro / Maxitruck,22,948,Mahindra Supro,180,155-80-13
+22,Mahindra,1,180,Mahindra Supro / Maxitruck,22,949,Mahindra Supro Maxitruck,180,155-80-13
+22,Mahindra,1,181,Mahindra TUV300,22,951,Mahindra TUV300 All,181,215-75-15
+23,Maruti,1,183,Maruti Swift Dzire /Dzire 2008,23,959,"Maruti Swift Dzire LDI/LXI/VDI/VXI
+",183,165-80-14
+23,Maruti,1,183,Maruti Swift Dzire /Dzire 2008,23,960,Maruti Swift Dzire Tour LDI/LXI/VDI,183,165-80-14
+23,Maruti,1,183,Maruti Swift Dzire /Dzire 2008,23,965,Maruti Swift Dzire Tour Zdi/Zxi,183,185-70-14
+23,Maruti,1,183,Maruti Swift Dzire /Dzire 2008,23,966,Maruti Swift Dzire ZXI/ZDI new,183,185-65-15
+23,Maruti,1,183,Maruti Swift Dzire /Dzire 2008,23,967,Maruti Swift Dzire ZDI/ZXI,183,185-70-14
+23,Maruti,1,184,Maruti Swift,23,969,"Maruti Swift LXI/LDI/VDI/VXI
+",184,165-80-14
+23,Maruti,1,184,Maruti Swift,23,976,"Maruti Swift ZXI/ZDI
+",184,185-65-15
+23,Maruti,1,184,Maruti Swift,23,977,OLD Maruti Swift ZDI/ZXI,184,185-70-14
+23,Maruti,1,185,Maruti Alto,23,980,"Maruti Alto Green LX/LXi (CNG)/STD
+",185,145-80-12
+23,Maruti,1,185,Maruti Alto,23,981,Maruti Alto LX/LXI/STD,185,145-80-12
+23,Maruti,1,185,Maruti Alto,23,982,Maruti Alto 800,185,145-80-12
+23,Maruti,1,185,Maruti Alto,23,986,Maruti Alto 658 JDM,185,145-80-13
+23,Maruti,1,186,Maruti Baleno,23,993,Maruti Baleno LX,186,165-80-13
+23,Maruti,1,186,Maruti Baleno,23,994,Maruti Baleno Lxi,186,165-80-13
+23,Maruti,1,186,Maruti Baleno,23,995,Maruti Baleno Vxi,186,185-65-14
+23,Maruti,1,186,Maruti Baleno,23,996,Maruti Baleno Vxi BS III,186,185-65-14
+23,Maruti,1,186,Maruti Baleno,23,2423,BALENO RS,186,195-55-16
+23,Maruti,1,186,Maruti Baleno,23,2424,BALENO Sigma Petrol,186,185-65-15
+23,Maruti,1,186,Maruti Baleno,23,2425,BALENO Delta Petrol,186,185-65-15
+23,Maruti,1,186,Maruti Baleno,23,2426,BALENO Zeta Petrol,186,195-55-16
+23,Maruti,1,186,Maruti Baleno,23,2427,BALENO Alpha Petrol,186,195-55-16
+23,Maruti,1,186,Maruti Baleno,23,2428,BALENO Delta (Automatic) Petrol,186,185-65-15
+23,Maruti,1,186,Maruti Baleno,23,2429,BALENO Zeta (Automatic) Petrol,186,195-55-16
+23,Maruti,1,186,Maruti Baleno,23,2430,BALENO Alpha (Automatic) Petrol,186,195-55-16
+23,Maruti,1,186,Maruti Baleno,23,2431,BALENO Sigma Diesel,186,185-65-15
+23,Maruti,1,186,Maruti Baleno,23,2432,BALENO Delta Diesel,186,185-65-15
+23,Maruti,1,186,Maruti Baleno,23,2433,BALENO Zeta Diesel,186,195-55-16
+23,Maruti,1,186,Maruti Baleno,23,2434,BALENO Alpha Diesel,186,195-55-16
+23,Maruti,1,187,Maruti Wagon R,23,997,"Maruti Wagon R Diesel/VXI
+",187,155-65-14
+23,Maruti,1,187,Maruti Wagon R,23,998,"Maruti Wagon R LXI(Petrol/CNG/DUO)
+",187,145-80-13
+23,Maruti,1,187,Maruti Wagon R,23,999,"Maruti Wagon R LX(Petrol)
+",187,145-80-13
+23,Maruti,1,187,Maruti Wagon R,23,1002,"Maruti Wagon Stringray LXI/VXI
+",187,155-65-14
+23,Maruti,1,188,Maruti Vitara Brezza,23,1007,Maruti Vitara Brezza (Diesel),188,215-60-16
+23,Maruti,1,189,Maruti Celerio,23,1011,"Maruti Celerio Green Vxi (CNG)
+",189,165-70-14
+23,Maruti,1,189,Maruti Celerio,23,1012,"Maruti Celerio VXI/ZXI
+",189,165-70-14
+23,Maruti,1,189,Maruti Celerio,23,1013,Celerio LXI/LXI(AT),189,155-80-13
+23,Maruti,1,190,Maruti Omni,23,1018,"Petrol/Diesel/CNG
+",190,145-80-12
+23,Maruti,1,191,Maruti Eeco,23,1024,"Petrol/Diesel/CNG
+",191,155-0-13
+23,Maruti,1,192,Maruti Ertiga,23,1031,Maruti Ertiga Petrol/Diesel/CNG,192,185-65-15
+23,Maruti,1,193,Maruti Ciaz,23,1041,Maruti Ciaz Zxi / AT Zxi Plus (Petrol),193,185-65-15
+23,Maruti,1,193,Maruti Ciaz,23,1042,Maruti Ciaz Vdi / Vdi Plus (Diesel),193,185-65-15
+23,Maruti,1,193,Maruti Ciaz,23,1044,Maruti Ciaz Vxi / Vxi Plus (Petrol)(AT/MT),193,185-65-15
+23,Maruti,1,193,Maruti Ciaz,23,1046,Maruti Ciaz Zdi /Zdi Option(Diesel),193,185-65-15
+23,Maruti,1,193,Maruti Ciaz,23,1047,Maruti Ciaz Zdi Plus (Diesel),193,195-55-16
+23,Maruti,1,193,Maruti Ciaz,23,1049,Maruti Ciaz Zxi Plus(Petrol),193,195-55-16
+23,Maruti,1,194,Maruti 800,23,1051,Maruti 800 Std BSIII,194,145-70-12
+23,Maruti,1,195,Maruti Alto K10,23,1054,Maruti Alto K10 LXi [2010 – 2014],195,145-70-13
+23,Maruti,1,195,Maruti Alto K10,23,1057,Maruti Alto K10 VXi [2010 – 2014],195,145-70-13
+23,Maruti,1,195,Maruti Alto K10,23,1061,Maruti Alto K10 LX/LXI/VXI,195,155-65-13
+23,Maruti,1,196,Maruti A-Star,23,1063,"Petrol/Diesel/CNG
+",196,155-80-13
+23,Maruti,1,197,Maruti Grand Vitara,23,1068,Maruti Grand Vitara 2.4 AT,197,225-70-16
+23,Maruti,1,197,Maruti Grand Vitara,23,1069,Maruti Grand Vitara 2.4 AT(Petrol),197,225-65-17
+23,Maruti,1,197,Maruti Grand Vitara,23,1070,Maruti Grand Vitara 2.4 MT,197,225-70-16
+23,Maruti,1,197,Maruti Grand Vitara,23,1071,Maruti Grand Vitara 2.4 MT(Petrol),197,225-65-17
+23,Maruti,1,197,Maruti Grand Vitara,23,1072,Maruti Grand Vitara Diesel ,197,225-60-16
+23,Maruti,1,198,Maruti Gypsy,23,1073,Maruti Gypsy King Hard Top/ Soft Top (Petrol),198,205-70-15
+23,Maruti,1,199,Maruti Kizashi,23,1076,Maruti Kizashi CVT/MT,199,215-55-17
+23,Maruti,1,200,Maruti Ritz,23,1078,"Maruti Ritz LDI/AT/LXI/VXI/VDI
+",200,165-80-14
+23,Maruti,1,200,Maruti Ritz,23,1085,"Maruti Ritz ZDI/ZXI
+",200,185-70-14
+23,Maruti,1,202,Maruti SX4,23,1093,Maruti SX4 Green/VDI/VXI,202,195-65-15
+23,Maruti,1,202,Maruti SX4,23,1096,"Maruti SX4 LDI/ZXI/ZXI AT/ZXI MT
+",202,205-60-16
+23,Maruti,1,203,Maruti Zen Estilo,23,1101,Maruti Zen Estilo/ Estilo LXI / VXI (Petrol/CNG),203,145-70-13
+23,Maruti,1,204,Maruti Esteem,23,1106,"Maruti Esteem AX/AX BS II
+",204,175-70-13
+23,Maruti,1,204,Maruti Esteem,23,1107,"Maruti Esteem Vx BS II(Petrol)
+",204,175-70-13
+23,Maruti,1,204,Maruti Esteem,23,1108,"Maruti Esteem LXI/LXI BS II/LXI BS III
+",204,155-80-13
+23,Maruti,1,204,Maruti Esteem,23,1111,"Maruti Esteem LX/LX BS II/LX BS III
+",204,155-80-13
+23,Maruti,1,204,Maruti Esteem,23,1114,"Maruti Esteem Vx BS II/VX BS III
+",204,175-70-13
+23,Maruti,1,204,Maruti Esteem,23,1115,"Maruti Esteem Vxi BS III(Petrol)
+",204,175-70-13
+23,Maruti,1,205,Maruti Zen,23,1117,Maruti Zen old,205,145-70-13
+23,Maruti,1,206,Maruti Fronx,23,1118,Maruti Fronx Diesel/Petrol,206,195-55-16
+23,Maruti,1,207,Maruti Stingray,23,1120,"Maruti Stingray Petrol/Diesel/CNG
+",207,155-65-14
+23,Maruti,1,208,Maruti Swift Deca,23,1124,Petrol/Diesel/CNG,208,165-80-14
+23,Maruti,1,209,Nexa Ignis,23,1126,"Nexa Ignis All Petrol/Diesel/CNG
+
+",209,175-65-15
+23,Maruti,1,211,Maruti Suzuki Nexa S Cross,23,1147,Nexa S Cross Diesel,211,205-60-16
+23,Maruti,1,536,Ciaz,23,2412,Ciaz Smart Hybrid Delta Petrol,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2413,Ciaz Smart Hybrid Zeta Petrol,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2414,Ciaz Smart Hybrid Alpha Petrol,536,195-55-16
+23,Maruti,1,536,Ciaz,23,2415,Ciaz Smart Hybrid Automatic Delta Petrol,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2416,Ciaz Smart Hybrid Automatic Zeta Petrol,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2417,Ciaz Smart Hybrid Automatic Alpha Petrol,536,195-55-16
+23,Maruti,1,536,Ciaz,23,2418,Ciaz Smart Hybrid Sigma Petrol,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2419,Ciaz Smart Hybrid Sigma Diesel,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2420,Ciaz Smart Hybrid Delta Diesel,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2421,Ciaz Smart Hybrid Zeta Diesel,536,185-65-15
+23,Maruti,1,536,Ciaz,23,2422,Ciaz Smart Hybrid Alpha Diesel,536,195-55-16
+27,Mercedes-Benz,1,217,Mercedes-Benz A Class,27,1170,Mercedes-Benz A 200 A 180 Sport (Petrol),217,205-55-16
+27,Mercedes-Benz,1,217,Mercedes-Benz A Class,27,1171,Mercedes-Benz A 200 CDI Sport (Diesel),217,205-55-16
+27,Mercedes-Benz,1,217,Mercedes-Benz A Class,27,1172,Mercedes-Benz A Class A 180 Night Edition,217,205-55-16
+27,Mercedes-Benz,1,217,Mercedes-Benz A Class,27,1173,Mercedes-Benz A Class A 200d Night Edition,217,205-55-16
+27,Mercedes-Benz,1,218,Mercedes-Benz B Class,27,1174,Mercedes-Benz B 180 Sport (Petrol),218,205-55-16
+27,Mercedes-Benz,1,218,Mercedes-Benz B Class,27,1175,Mercedes-Benz B 200 CDI Sport (Diesel),218,205-55-16
+27,Mercedes-Benz,1,218,Mercedes-Benz B Class,27,1176,Mercedes-Benz A Class B 180 Night Edition,218,205-55-16
+27,Mercedes-Benz,1,218,Mercedes-Benz B Class,27,1177,Mercedes-Benz A Class B 200 Night Edition,218,205-55-16
+27,Mercedes-Benz,1,219,Mercedes-Benz CLA Class,27,1178,Mercedes Benz CLA Class 200 CDI Sport(Diesel),219,205-55-16
+27,Mercedes-Benz,1,219,Mercedes-Benz CLA Class,27,1179,Mercedes Benz CLA Class 200 CDI Style(Diesel),219,225-45-17
+27,Mercedes-Benz,1,219,Mercedes-Benz CLA Class,27,1180,Mercedes Benz CLA Class 200 CGI Sport(Petrol),219,225-45-17
+27,Mercedes-Benz,1,219,Mercedes-Benz CLA Class,27,1181,Mercedes Benz CLA Class 45 AMG(Petrol),219,235-40-18
+27,Mercedes-Benz,1,220,Mercedes-Benz CLS-Class,27,1182,Mercedes Benz CLS Class 250 CDI (Diesel),220,245-45-17
+27,Mercedes-Benz,1,220,Mercedes-Benz CLS-Class,27,1183,Mercedes Benz CLS Class 350 BE,220,245-45-17
+27,Mercedes-Benz,1,220,Mercedes-Benz CLS-Class,27,1184,Mercedes Benz CLS Class 63 AMG,220,245-40-18
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1185,Mercedes Benz E Class E 200 CGI,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1186,Mercedes Benz E Class E 63 AMG,221,245-40-18
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1187,Mercedes Benz E Class E 63 AMG,221,265-35-18
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1188,Mercedes Benz E Class E 63 AMG(Petrol),221,255-40-18
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1189,Mercedes Benz E Class E 63 AMG(Petrol),221,285-35-18
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1190,Mercedes Benz E Class E250 CDI Avantgarde,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1191,Mercedes Benz E Class E250 CDI Classic,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1192,Mercedes Benz E Class E250 Elegance,221,NULL
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1193,Mercedes Benz E Class E350 Avantgarde,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1194,Mercedes Benz E Class E350 Cabriolet,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1195,Mercedes Benz E Class E350 Cabriolet(Petrol),221,235-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1196,Mercedes Benz E Class E350 CDI Avantgarde,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1197,Mercedes Benz E Class E350 CDI Diesel,221,245-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1198,Mercedes Benz E Class E350 Coupe,221,235-45-17
+27,Mercedes-Benz,1,221,Mercedes-Benz E-Class,27,1199,Mercedes Benz E Class Elegance 220 CDI,221,245-45-17
+27,Mercedes-Benz,1,222,Mercedes-Benz G Class,27,1200,Mercedes Benz G Class G55 AMG,222,275-55-19
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1201,Mercedes Benz GL Class 350 CDI Executive,223,275-55-19
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1202,Mercedes Benz GL Class 350 CDI Luxury,223,275-55-19
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1203,Mercedes Benz GL Class 500,223,275-50-20
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1204,Mercedes Benz GL Class 63 AMG (Petrol),223,295-40-21
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1205,Mercedes Benz GL Class 63 AMG,223,275-50-20
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1206,Mercedes Benz GL Class Grand Edition Executive,223,275-55-19
+27,Mercedes-Benz,1,223,Mercedes-Benz GL-Class,27,1207,Mercedes Benz GL Class Grand Edition Luxury,223,275-55-19
+27,Mercedes-Benz,1,224,Mercedes-Benz M-Class,27,1208,Mercedes Benz M Class ML 250 CDI (Diesel),224,255-55-18
+27,Mercedes-Benz,1,224,Mercedes-Benz M-Class,27,1209,Mercedes Benz M Class ML 350 CDI,224,235-65-17
+27,Mercedes-Benz,1,224,Mercedes-Benz M-Class,27,1210,Mercedes Benz M Class ML 350 CDI (Diesel),224,255-50-19
+27,Mercedes-Benz,1,224,Mercedes-Benz M-Class,27,1211,Mercedes Benz M Class ML 63 AMG 4 MATIC (Petrol),224,265-45-20
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1212,Mercedes Benz C Class AMG,225,225-45-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1213,Mercedes Benz New C Class C 200 CGI Executive,225,205-45-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1214,Mercedes Benz New C Class C 220 CDI Avantgarde(Diesel),225,225-50-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1215,Mercedes Benz New C Class C 220 CDI Executive,225,205-55-16
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1216,Mercedes Benz New C Class C 220 CDI Style(Diesel),225,225-55-16
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1217,Mercedes Benz New C Class C 220 CGI (Petrol),225,225-50-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1218,Mercedes Benz New C Class C 250 CDI Avantgarde,225,225-45-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1219,Mercedes Benz New C Class C 250 CDI Elegance,225,225-45-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1220,Mercedes Benz New C Class C 63 AMG,225,205-55-16
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1221,New Mercedes Benz C Class C 200 CGI Avantgarde,225,225-45-17
+27,Mercedes-Benz,1,225,Mercedes-Benz New C-Class,27,1222,New Mercedes Benz C Class C 200 CGI Elegance,225,225-45-17
+27,Mercedes-Benz,1,226,Mercedes-Benz R-Class,27,1223,Mercedes Benz R Class R350 4Matic Long,226,255-55-18
+27,Mercedes-Benz,1,227,Mercedes-Benz S-Class,27,1224,Mercedes Benz S Class S 300 L,227,235-55-17
+27,Mercedes-Benz,1,227,Mercedes-Benz S-Class,27,1225,Mercedes Benz S Class S 350 CDI (Diesel),227,245-45-19
+27,Mercedes-Benz,1,227,Mercedes-Benz S-Class,27,1226,Mercedes Benz S Class S 350 CDI L,227,235-55-17
+27,Mercedes-Benz,1,227,Mercedes-Benz S-Class,27,1227,Mercedes Benz S Class S 350 L,227,235-55-17
+27,Mercedes-Benz,1,227,Mercedes-Benz S-Class,27,1228,Mercedes Benz S Class S 500 L,227,235-55-17
+27,Mercedes-Benz,1,227,Mercedes-Benz S-Class,27,1229,Mercedes Benz S Class S 500 Launch Edition,227,225-45-17
+27,Mercedes-Benz,1,228,Mercedes-Benz SL-Class,27,1230,Mercedes Benz SL Class SL 350,228,255-45-17
+27,Mercedes-Benz,1,228,Mercedes-Benz SL-Class,27,1231,Mercedes Benz SL Class SL 500,228,255-45-17
+27,Mercedes-Benz,1,229,Mercedes-Benz SLK-Class,27,1232,Mercedes Benz SLK Class 55 AMG(Petrol),229,235-40-18
+27,Mercedes-Benz,1,229,Mercedes-Benz SLK-Class,27,1233,Mercedes Benz SLK Class 55 AMG(Petrol),229,255-35-18
+27,Mercedes-Benz,1,229,Mercedes-Benz SLK-Class,27,1234,Mercedes Benz SLK Class SLK 350,229,225-45-17
+27,Mercedes-Benz,1,229,Mercedes-Benz SLK-Class,27,1235,Mercedes Benz SLK Class SLK 350,229,245-40-17
+27,Mercedes-Benz,1,229,Mercedes-Benz SLK-Class,27,1236,Mercedes Benz SLK Class SLK 350(Petrol),229,225-40-18
+27,Mercedes-Benz,1,229,Mercedes-Benz SLK-Class,27,1237,Mercedes Benz SLK Class SLK 350(Petrol),229,245-35-18
+27,Mercedes-Benz,1,230,Mercedes-Benz SLS AMG,27,1238,Mercedes Benz SLS AMG Coupe,230,265-35-19
+27,Mercedes-Benz,1,230,Mercedes-Benz SLS AMG,27,1239,Mercedes Benz SLS AMG Roadster,230,265-35-19
+28,Mini Cooper,1,231,Mini Cooper,28,1240,Mini Cooper Hatch,231,195-55-16
+28,Mini Cooper,1,231,Mini Cooper,28,1241,Mini Cooper S,231,195-55-16
+28,Mini Cooper,1,231,Mini Cooper,28,1242,Mini Cooper D 3 Door,231,195-55-16
+28,Mini Cooper,1,231,Mini Cooper,28,1243,Mini Cooper D 5 Door,231,195-55-16
+28,Mini Cooper,1,232,Mini Cooper Convertible,28,1244,Mini Cooper Convertible 1.6,232,195-55-16
+28,Mini Cooper,1,232,Mini Cooper Convertible,28,1245,Mini Cooper Convertible S ,232,195-55-16
+28,Mini Cooper,1,233,Mini Cooper Countryman,28,1246,Mini Cooper Countryman S,233,205-55-17
+28,Mini Cooper,1,233,Mini Cooper Countryman,28,1247,Mini Cooper D Countryman,233,225-45-18
+28,Mini Cooper,1,233,Mini Cooper Countryman,28,1248,Mini Cooper One Countryman,233,225-45-18
+28,Mini Cooper,1,234,Mini Cooper Clubman,28,1249,Mini Cooper Clubman S,234,195-55-16
+29,Mitsubishi,1,235,Mitsubishi Cedia,29,1250,Mitsubishi Cedia Select / Sports,235,195-60-15
+29,Mitsubishi,1,236,Mitsubishi Lancer,29,1252,Mitsubishi Lancer 1.5 L Petrol LX,236,195-60-15
+29,Mitsubishi,1,237,Mitsubishi Lancer Evolution X,29,1253,Mitsubishi Lancer Evolution X 2.0,237,245-40-18
+29,Mitsubishi,1,238,Mitsubishi Montero,29,1254,Mitsubishi Montero 3.2 AT,238,265-65-17
+29,Mitsubishi,1,239,Mitsubishi Outlander,29,1255,Mitsubishi Outlander SUV,239,215-70-16
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1256,Mitsubishi Pajero 2.8 SFX,240,265-70-15
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1257,Mitsubishi Pajero 2.8 SFX BSIII Dual Tone,240,265-70-15
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1258,Mitsubishi Pajero 2.8 SFX BSIII Single Tone,240,265-70-15
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1259,Mitsubishi Pajero 2.8 SFX Dual Tone,240,265-70-15
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1260,Mitsubishi Pajero Sport 4X2 AT(Diesel),240,265-65-17
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1261,Mitsubishi Pajero Sport 4X4(Diesel),240,265-65-17
+29,Mitsubishi,1,240,Mitsubishi Pajero,29,1262,Mitsubishi Pajero Sport Anniversary Edition,240,265-65-17
+30,Nissan,1,241,Nissan 370Z,30,1263,Nissan 370Z AT,241,225-50-18
+30,Nissan,1,241,Nissan 370Z,30,1264,Nissan 370Z AT,241,245-45-18
+30,Nissan,1,241,Nissan 370Z,30,1265,Nissan 370Z Sport,241,245-40-19
+30,Nissan,1,241,Nissan 370Z,30,1266,Nissan 370Z Sport,241,275-35-19
+30,Nissan,1,242,Nissan Evalia,30,1267,"Nissan Evalia SV Diesel/XE Diesel
+",242,185-65-15
+30,Nissan,1,242,Nissan Evalia,30,1270,Nissan Evalia XL Option Diesel,242,165-0-14
+30,Nissan,1,242,Nissan Evalia,30,1271,Nissan Evalia XL Plus Diesel/XE Plus Diesel,242,165-0-14
+30,Nissan,1,242,Nissan Evalia,30,1273,Nissan Evalia XV Diesel/XV Option Diesel,242,185-65-15
+30,Nissan,1,243,Nissan Micra,30,1274,Nissan Micra AT Petrol/Diesel XV,243,165-70-14
+30,Nissan,1,243,Nissan Micra,30,1276,Nissan Micra Diesel XV Premium,243,175-60-15
+30,Nissan,1,243,Nissan Micra,30,1280,"Nissan Micra XL Optional Diesel/XL Optional Petrol
+",243,165-70-14
+30,Nissan,1,243,Nissan Micra,30,1281,"Nissan Micra XL Diesel/XL Petrol
+",243,165-70-14
+30,Nissan,1,243,Nissan Micra,30,1282,"Nissan Micra XE Diesel/XE Plus
+",243,165-70-14
+30,Nissan,1,243,Nissan Micra,30,1283,Nissan Micra XV Diesel,243,175-60-15
+30,Nissan,1,244,Nissan Micra Active,30,1284,Nissan Micra Active XL Petrol,244,165-70-14
+30,Nissan,1,244,Nissan Micra Active,30,1285,Nissan Micra Active XV Petrol,244,155-80-13
+30,Nissan,1,244,Nissan Micra Active,30,1286,Nissan Micra Active XVS Petrol,244,155-80-13
+30,Nissan,1,245,Nissan Sunny,30,1287,Nissan Sunny Diesel XE(Petrol),245,185-70-14
+30,Nissan,1,245,Nissan Sunny,30,1288,Nissan Sunny Diesel XL(Diesel),245,185-70-14
+30,Nissan,1,245,Nissan Sunny,30,1289,Nissan Sunny Diesel XV(Diesel),245,185-65-15
+30,Nissan,1,245,Nissan Sunny,30,1290,Nissan Sunny XE(Petrol),245,185-70-14
+30,Nissan,1,245,Nissan Sunny,30,1291,Nissan Sunny XL CVT Petrol,245,185-70-14
+30,Nissan,1,245,Nissan Sunny,30,1292,Nissan Sunny XL Petrol,245,185-70-14
+30,Nissan,1,245,Nissan Sunny,30,1293,Nissan Sunny XV (CVT),245,185-70-14
+30,Nissan,1,245,Nissan Sunny,30,1294,Nissan Sunny XV D Diesel Premium Safety(Diesel),245,185-65-15
+30,Nissan,1,246,Nissan Teana,30,1295,Nissan Teana XL,246,205-65-16
+30,Nissan,1,246,Nissan Teana,30,1296,Nissan Teana XV,246,215-55-17
+30,Nissan,1,247,Nissan Terrano,30,1297,"Nissan Terrano All Diesel/Petrol
+
+",247,215-65-16
+30,Nissan,1,248,Nissan X-Trail,30,1305,Nissan X Trail LE,248,215-65-16
+30,Nissan,1,248,Nissan X-Trail,30,1306,Nissan X Trail SLX AT,248,215-65-16
+30,Nissan,1,248,Nissan X-Trail,30,1307,Nissan X Trail SLX MT,248,215-60-17
+30,Nissan,1,249,Nissan GT-R,30,1308,Nissan GT-R Sport,249,255-40-20
+33,Renault,1,258,Renault Kwid,33,1399,Renault Kwid Petrol/Diesel,258,155-80-13
+33,Renault,1,259,Renault Duster,33,2444,Renault Duster Petrol/Diesel,259,215-65-16
+33,Renault,1,260,Renault Fluence,33,1423,"Renault Fluence Petrol/Diesel
+",260,205-60-16
+33,Renault,1,261,Renault Koleos,33,1426,Renault Koleos All Diesel,261,225-60-17
+33,Renault,1,262,Renault Lodgy,33,1429,Renault Lodgy All Diesel,262,185-65-15
+33,Renault,1,263,Renault Pulse,33,1436,"Renault Pulse Petrol RxE/Petrol RxL/Petrol RxZ
+",263,165-70-14
+33,Renault,1,263,Renault Pulse,33,1437,"Renault Pulse RxL (Diesel)/RxL Optional/RxZ Optional
+",263,165-70-14
+33,Renault,1,263,Renault Pulse,33,1441,"Renault Pulse RxZ (Diesel)
+",263,175-60-15
+33,Renault,1,264,Renault Scala,33,1415,Renault Scala Diesel RxE (Diesel/Petrol),264,185-70-14
+33,Renault,1,264,Renault Scala,33,1416,"Renault Scala Diesel RxZ (Diesel)
+",264,185-70-14
+33,Renault,1,264,Renault Scala,33,1418,"Renault Scala Diesel RxL (Diesel/Petrol)
+
+",264,185-65-15
+33,Renault,1,264,Renault Scala,33,1419,"Renault Scala Diesel RxL AT (Petrol)/RxZ AT (Petrol)
+",264,185-65-15
+34,Reva,1,265,Reva i,34,1444,Reva i A/C,265,145-70-13
+34,Reva,1,265,Reva i,34,1445,Reva i Classe,265,145-70-13
+34,Reva,1,265,Reva i,34,1446,Reva i Standard,265,145-70-13
+34,Reva,1,266,Reva T2(Elecrtric),34,1447,Reva T2(Elecrtric),266,155-70-13
+34,Reva,1,267,Reva T20(Elecrtric),34,1448,Reva T20(Elecrtric),267,155-70-13
+36,Skoda,1,272,Skoda Fabia,36,1457,Skoda Fabia 1.2 MPI Active Plus,272,185-60-14
+36,Skoda,1,272,Skoda Fabia,36,1458,Skoda Fabia 1.2 MPI Ambition,272,175-70-14
+36,Skoda,1,272,Skoda Fabia,36,1459,Skoda Fabia 1.2 MPI Ambition Plus,272,185-60-14
+36,Skoda,1,272,Skoda Fabia,36,1460,Skoda Fabia MPI/Scout 1.2 TDI /1.2 MPI Elegance/1.6 MPI El,272,185-60-15
+36,Skoda,1,272,Skoda Fabia,36,1461,Skoda Fabia 1.2 Petrol Active,272,185-60-14
+36,Skoda,1,272,Skoda Fabia,36,1462,Skoda Fabia 1.2 TDI / Scout 1.2 TDI,272,175-70-14
+36,Skoda,1,272,Skoda Fabia,36,1466,Skoda Fabia 1.2L Diesel Elegance,272,175-70-14
+36,Skoda,1,272,Skoda Fabia,36,1468,Skoda Fabia Scout 1.2 MPI,272,185-60-15
+36,Skoda,1,273,Skoda New Laura,36,1470,Skoda New Laura 1.8 TSI Active / TSI Ambition,273,195-65-15
+36,Skoda,1,273,Skoda New Laura,36,1472,Skoda New Laura Ambition 2.0 TDI CR AT/MT,273,195-65-15
+36,Skoda,1,273,Skoda New Laura,36,1474,Skoda New Laura Elegance 2.0 TDI CR AT/MT,273,205-55-16
+36,Skoda,1,273,Skoda New Laura,36,1476,Skoda New Laura LandK 2.0 TDI CR AT,273,205-55-16
+36,Skoda,1,273,Skoda New Laura,36,1477,Skoda New Laura RS,273,205-60-15
+36,Skoda,1,274,Skoda Octavia,36,1478,"Skoda Octavia Petrol/Diesel
+",274,205-55-16
+36,Skoda,1,275,Skoda Rapid,36,1484,Skoda Rapid 1.6 MPI Active/ TDI Active,275,175-70-14
+36,Skoda,1,275,Skoda Rapid,36,1486,Skoda Rapid 1.6 MPI AT Ambition / MPI Elegance,275,185-60-15
+36,Skoda,1,275,Skoda Rapid,36,1487,Skoda Rapid 1.6/1.5 MPI AT Elegance/ TDI AT Elegance,275,185-60-15
+36,Skoda,1,275,Skoda Rapid,36,1490,Skoda Rapid 1.6 MPI Ambition/ TDI Ambition,275,175-70-14
+36,Skoda,1,275,Skoda Rapid,36,1491,Skoda Rapid 1.6/1.5 TDI MT Elegance,275,185-60-15
+36,Skoda,1,275,Skoda Rapid,36,1492,Skoda Rapid 1.5 TDi A/T Ambition plus,275,185-60-15
+36,Skoda,1,275,Skoda Rapid,36,1495,Skoda Rapid 1.5 TDi MT Ambition / Active,275,185-60-15
+36,Skoda,1,276,Skoda Superb,36,1497,Skoda Superb Ambition/Elegance  Petrol/Diesel,276,205-55-16
+36,Skoda,1,277,Skoda Yeti,36,1502,Skoda Yeti Active / Ambition /Elegance (4X2 / 4x4),277,215-60-16
+37,Storm,1,278,Storm,37,1507,San Motors Storm 1.2,278,155-70-13
+38,Tata,1,279,Tata Tiago,38,1508,"Tata Tiago XB/Tiago XE/Tiago XM
+",279,155-80-13
+38,Tata,1,279,Tata Tiago,38,1511,"Tata Tiago XT/Tiago XZ
+",279,175-65-14
+38,Tata,1,280,Tata Aria,38,1513,Tata Aria AT / Pride,280,235-65-17
+38,Tata,1,280,Tata Aria,38,1515,Tata Aria Pleasure Fabric / 4x2,280,235-70-16
+38,Tata,1,280,Tata Aria,38,1516,Tata Aria Prestige 4x2,280,235-70-16
+38,Tata,1,280,Tata Aria,38,1518,Tata Aria Prestige Leather/Fabric,280,235-65-17
+38,Tata,1,280,Tata Aria,38,1520,Tata Aria Pure 4x2 / Pure 4x2 BSIII,280,235-70-16
+38,Tata,1,280,Tata Aria,38,1522,Tata Aria Pure 4x2 Fabric BSIII,280,235-70-16
+38,Tata,1,281,Tata Bolt,38,1523,"Tata Bolt Quadrajet XE/XM/XMS
+",281,175-65-14
+38,Tata,1,281,Tata Bolt,38,1524,"Tata Bolt Revertron XE/XM/XMS
+",281,175-65-14
+38,Tata,1,281,Tata Bolt,38,1526,"Tata Bolt Quadrajet XT (Diesel)
+",281,175-65-15
+38,Tata,1,281,Tata Bolt,38,1530,"Tata Bolt Revertron XT (Petrol)
+",281,175-65-15
+38,Tata,1,282,Tata Indica V2,38,1531,"Tata Indica eV2 DL BSIII/DLE BSIII/DLS BSIII/DLX BSIII
+",282,165-65-13
+38,Tata,1,282,Tata Indica V2,38,1538,Tata Indica eV2 eL/eLS/eLS(Diesel)/eLX (Diesel),282,155-80-13
+38,Tata,1,282,Tata Indica V2,38,1539,"Tata Indica eV2 eXeta
+",282,165-65-13
+38,Tata,1,282,Tata Indica V2,38,1541,Tata Indica eV2 Emax CNG GLS(CNG),282,155-80-13
+38,Tata,1,282,Tata Indica V2,38,1543,"Tata Indica eV2 eLE
+",282,165-65-14
+38,Tata,1,282,Tata Indica V2,38,1545,"Tata Indica eV2 eLX
+",282,165-65-13
+38,Tata,1,282,Tata Indica V2,38,1548,Tata Indica V2 DLS BS III(Diesel),282,155-80-13
+38,Tata,1,283,Tata Indica Vista,38,1549,Tata Indica Vista Quadrajet AX /VX/ LX,283,175-65-14
+38,Tata,1,283,Tata Indica Vista,38,1554,Tata Indica Vista Safire GLX/ GLS / 90hp GVX,283,175-70-13
+38,Tata,1,283,Tata Indica Vista,38,1558,Tata Indica Vista Safire GVX / 90hp GZX / 90hp GLX,283,175-65-14
+38,Tata,1,283,Tata Indica Vista,38,1559,Tata Indica Vista TDI LS / LX,283,175-65-14
+38,Tata,1,284,Tata Indigo CS,38,1561,Tata Indigo eCS All,284,175-65-14
+38,Tata,1,285,Tata Indigo XL,38,1570,"Tata Indigo XL Petrol/Diesel/CNG
+",285,175-65-14
+38,Tata,1,286,Tata Manza,38,1575,"Tata Manza Aqua Petrol/Diesel
+",286,185-60-15
+38,Tata,1,287,Tata Nano,38,1583,"Tata Nano Petrol/Diesel/ Electric
+",287,135-70-12
+38,Tata,1,288,Tata New Safari,38,1598,"Tata New Safari DICOR All Diesel
+",288,235-70-16
+38,Tata,1,289,Tata Sumo,38,1612,"Tata Sumo Gold Diesel
+",289,215-75-15
+38,Tata,1,290,Tata Sumo Grande,38,1623,Tata Sumo Grande MKII EX / GX / LX / Turbo 2.0 EX,290,235-70-16
+38,Tata,1,291,Tata Venture,38,1624,Tata Venture EX /GX /LX ,291,165-0-14
+38,Tata,1,292,Tata Winger,38,1632,Tata Winger Deluxe / Luxury /Standard ,292,185-0-14
+38,Tata,1,293,Tata Winger Platinum,38,1638,Tata Winger Platinum,293,185-0-14
+38,Tata,1,294,Tata Xenon XT,38,1640,Tata Xenon XT EX 4X2,294,215-75-16
+38,Tata,1,294,Tata Xenon XT,38,1641,Tata Xenon XT EX 4X2 (Diesel),294,235-70-16
+38,Tata,1,294,Tata Xenon XT,38,1642,Tata Xenon XT EX 4X4,294,215-75-16
+38,Tata,1,294,Tata Xenon XT,38,1643,Tata Xenon XT EX 4X4 (Diesel),294,235-70-16
+38,Tata,1,295,Tata Zest,38,1644,"Tata Zest Petrol/Diesel
+",295,185-60-15
+38,Tata,1,296,Tata GenX Nano,38,1656,Tata GenX Nano (Front Wheel Tyre),296,135-70-12
+38,Tata,1,296,Tata GenX Nano,38,1663,Tata GenX Nano (Rear Wheel Tyre),296,155-65-12
+38,Tata,1,297,Tata Hexa,38,1664,Tata Hexa XE MT 4x2,297,235-70-16
+38,Tata,1,297,Tata Hexa,38,1665,Tata Hexa XM MT 4x2,297,235-70-16
+38,Tata,1,297,Tata Hexa,38,1666,Tata Hexa XMA AT 4x2,297,235-70-16
+38,Tata,1,297,Tata Hexa,38,1667,Tata Hexa XT MT 4x2,297,235-55-19
+38,Tata,1,297,Tata Hexa,38,1668,Tata Hexa XT MT 4x4,297,235-55-19
+38,Tata,1,297,Tata Hexa,38,1669,Tata Hexa XTA AT 4x2,297,235-55-19
+38,Tata,1,298,Tata Safari Storme,38,1670,Tata Safari Storme EX / LX /VX ,298,235-70-16
+39,Toyota,1,299,Toyota Innova,39,1674,"Toyota Innova Diesel/Petrol
+",299,205-65-15
+39,Toyota,1,300,Toyota Camry,39,1691,Toyota Camry AT/MT-NEW,300,215-60-16
+39,Toyota,1,300,Toyota Camry,39,1696,Toyota Camry Hybrid,300,215-55-16
+39,Toyota,1,301,Toyota Corolla Altis,39,1697,"Toyota Corolla Altis Petrol/Diesel
+",301,195-65-15
+39,Toyota,1,302,Toyota Etios,39,1707,Toyota Etios Diesel,302,175-65-14
+39,Toyota,1,302,Toyota Etios,39,1710,"Toyota Etios V/VD/VXD
+",302,185-60-15
+39,Toyota,1,302,Toyota Etios,39,1711,Toyota Etios J,302,175-65-14
+39,Toyota,1,302,Toyota Etios,39,1712,"Toyota Etios GD Petrol
+",302,175-65-14
+39,Toyota,1,302,Toyota Etios,39,1713,"Toyota Etios GD Safety
+",302,185-60-15
+39,Toyota,1,302,Toyota Etios,39,1716,"Toyota Etios G/G Safety
+",302,175-65-14
+39,Toyota,1,303,Toyota Etios Liva,39,1722,"Toyota Etios D-4D JD/ VD
+",303,175-65-14
+39,Toyota,1,303,Toyota Etios Liva,39,1723,"Toyota Etios LivaTRD Sportivo-Petrol/Diesel
+",303,175-65-14
+39,Toyota,1,303,Toyota Etios Liva,39,1726,"Toyota Etios Liva GD/GD Safety
+",303,175-65-14
+39,Toyota,1,303,Toyota Etios Liva,39,1728,"Toyota Etios Liva G/G Plus
+",303,175-65-14
+39,Toyota,1,303,Toyota Etios Liva,39,1729,"Toyota Etios D-4D TRD Sportive/ VXD/Sportive
+",303,185-60-15
+39,Toyota,1,303,Toyota Etios Liva,39,1730,"Toyota Etios Liva V/ VX
+",303,185-60-15
+39,Toyota,1,304,Toyota Fortuner,39,1731,Toyota Fortuner AT / MT,304,265-65-17
+39,Toyota,1,305,Toyota Land Cruiser,39,1734,Toyota Land Cruiser VX,305,285-60-18
+39,Toyota,1,306,Toyota Land Cruiser Prado,39,1735,Toyota Land Cruiser Prado Diesel,306,265-60-18
+39,Toyota,1,307,Toyota Prius,39,1736,Toyota Prius Z5/Z6,307,195-65-15
+39,Toyota,1,308,Toyota Innova Crysta,39,1738,Toyota Innova Crysta Diesel/Petrol,308,205-65-16
+39,Toyota,1,309,Toyota Platinum Etios,39,1754,"Toyota Platinum Etios G/GD/GX
+",309,175-65-14
+39,Toyota,1,309,Toyota Platinum Etios,39,1757,"Toyota Platinum Etios V/VD/VX
+",309,185-60-15
+39,Toyota,1,310,Toyoto Etios Cross,39,1760,Toyoto Etios Cross Diesel/Petrol,310,185-60-15
+40,Volkswagen,1,311,Volkswagen Beetle,40,1762,Volkswagen Beetle 2.0,311,195-65-15
+40,Volkswagen,1,312,Volkswagen Jetta,40,1763,Volkswagen Jetta All,312,205-55-16
+40,Volkswagen,1,313,Volkswagen Passat,40,1769,Volkswagen Passat Petrol/Diesel ,313,215-55-16
+40,Volkswagen,1,314,Volkswagen Phaeton,40,1773,Volkswagen Phaeton 3.6,314,235-55-17
+40,Volkswagen,1,315,Volkswagen Polo,40,1779,"Volkswagen Polo Trendline (Diesel/Petrol)
+",315,175-70-14
+40,Volkswagen,1,315,Volkswagen Polo,40,1780,"Volkswagen Polo Comfortline/Highline  (Diesel/Petrol)
+
+",315,185-60-15
+40,Volkswagen,1,316,Volkswagen Touareg,40,1784,Volkswagen Touareg V6 3.0 TDI,316,255-55-18
+40,Volkswagen,1,317,Volkswagen Vento,40,1786,"Volkswagen Vento Trendline (Diesel/Petrol)
+",317,175-70-14
+40,Volkswagen,1,317,Volkswagen Vento,40,1787,"Volkswagen Vento Comfortline/Highline  (Diesel/Petrol)
+
+",317,185-60-15
+40,Volkswagen,1,317,Volkswagen Vento,40,1792,"Volkswagen Vento Highline +  (Diesel/Petrol)
+
+",317,195-55-16
+40,Volkswagen,1,315,Volkswagen Polo,40,1793,"Volkswagen Polo Highline +
+  (Diesel/Petrol)",315,195-55-16
+40,Volkswagen,1,318,Volkswagen Ameo,40,1794,"Volkswagen Ameo Trendline (Diesel/Petrol)
+",318,175-70-14
+40,Volkswagen,1,318,Volkswagen Ameo,40,1795,"Volkswagen Ameo Comfortline/Highline  (Diesel/Petrol)
+
+",318,185-60-15
+40,Volkswagen,1,318,Volkswagen Ameo,40,1796,"Volkswagen Ameo Highline +  (Diesel/Petrol)
+
+",318,195-55-16
+40,Volkswagen,1,318,Volkswagen Ameo,40,1797,Volkswagen Ameo 1.5 TDi Diesel Highline MT,318,185-60-15
+40,Volkswagen,1,318,Volkswagen Ameo,40,1798,Volkswagen Ameo 1.5 TDi Diesel Trendline MT,318,175-70-14
+41,Volvo,1,319,Volvo S60,41,1799,Volvo S60 D3 Kinetic,319,215-50-17
+41,Volvo,1,319,Volvo S60,41,1800,Volvo S60 D3 Summum,319,215-50-17
+41,Volvo,1,319,Volvo S60,41,1801,Volvo S60 D4 Kinetic,319,215-50-17
+41,Volvo,1,319,Volvo S60,41,1802,Volvo S60 D4 Summum(Diesel),319,235-40-18
+41,Volvo,1,319,Volvo S60,41,1803,Volvo S60 D5 Kinetic,319,215-50-17
+41,Volvo,1,319,Volvo S60,41,1804,Volvo S60 D5 Summum,319,215-50-17
+41,Volvo,1,319,Volvo S60,41,1805,Volvo S60 D5 Summum(Diesel),319,235-40-18
+41,Volvo,1,319,Volvo S60,41,1806,Volvo S60 T6 Summum,319,215-50-17
+41,Volvo,1,320,Volvo S80,41,1807,Volvo S80 3.2 (Petrol),320,245-40-17
+41,Volvo,1,320,Volvo S80,41,1808,Volvo S80 D3 Kinetic,320,245-40-17
+41,Volvo,1,320,Volvo S80,41,1809,Volvo S80 D3 Summum,320,245-40-17
+41,Volvo,1,320,Volvo S80,41,1810,Volvo S80 D5,320,245-40-17
+41,Volvo,1,320,Volvo S80,41,1811,Volvo S80 V8 AWD,320,245-40-17
+41,Volvo,1,321,Volvo V40 Cross Country,41,1812,Volvo V40 Cross Country D3 (Diesel),321,NULL
+41,Volvo,1,321,Volvo V40 Cross Country,41,1813,Volvo V40 Cross Country T4 (Petrol),321,NULL
+41,Volvo,1,322,Volvo XC60,41,1814,Volvo XC60 D3 Kinetic,322,235-65-17
+41,Volvo,1,322,Volvo XC60,41,1815,Volvo XC60 D3 Summum,322,235-65-17
+41,Volvo,1,322,Volvo XC60,41,1816,Volvo XC60 D5,322,235-65-17
+41,Volvo,1,323,Volvo XC90,41,1817,Volvo XC90 D5 Inscription,323,235-60-18
+41,Volvo,1,323,Volvo XC90,41,1818,Volvo XC90 D5 AWD,323,235-65-17
+41,Volvo,1,324,Volvo S90,41,1819,Volvo S90,324,245-40-18
+43,DAEWOO,1,326,CIELO,43,1821,DLX,326,175-70-13
+43,DAEWOO,1,326,CIELO,43,1822,NORMAL,326,175-70-13
+43,DAEWOO,1,327,MATIZ,43,1823,"MATIZ
+",327,155-70-13
+45,Opel,1,330,Astra,45,1826,Opel Astra 1.6,330,175-70-13
+45,Opel,1,331,Corsa,45,1827,"Opel Corsa
+",331,175-70-13
