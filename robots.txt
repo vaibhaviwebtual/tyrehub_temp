@@ -1,0 +1,17 @@
+#  Title: tyrehub.com
+
+User-agent: *
+Allow: /
+Disallow: /shop/?*
+Disallow: /product/?*
+Disallow: /online-tyre-services-partner/?*
+Disallow: /wp-admin/
+Disallow: /myAdmin/
+Disallow: /dev/product/
+Disallow: /dev/author/
+Disallow: /dev/shop/
+Disallow: /shop/page/
+Disallow: /comments/feed/
+Disallow: /xmlrpc.php
+
+Sitemap: https://www.tyrehub.com/sitemap_index.xml
