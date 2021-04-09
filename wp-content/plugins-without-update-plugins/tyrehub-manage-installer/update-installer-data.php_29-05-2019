@@ -1,0 +1,381 @@
+<?php
+function tim_update(){
+
+ 	global $wpdb;
+    $currency = get_woocommerce_currency_symbol();
+    $installer_id = $_GET['installer_id'];
+    $sql = "SELECT * FROM th_installer_data where installer_data_id = '$installer_id'";
+    $installer_data = $wpdb->get_results($sql);
+    foreach ($installer_data as $key => $value)
+	{
+		$id = $value->installer_data_id;
+		$user_id = $value->user_id;
+		$name = $value->business_name;
+		$mobile_no = $value->contact_no;
+		$add = $value->address;
+		$visibility = $value->visibility;
+		$image = $value->image;
+		$state = $value->state;
+		$city = $value->city;
+		$pincode = $value->pincode;
+		$gst_no = $value->gst_no;
+		$company_name = $value->company_name;
+		$company_add = $value->company_name;
+		$contact_person = $value->contact_person;
+    	$av_time = $value->available_time;
+    	$av_day = $value->available_days;
+    	$store_phone = $value->store_phone;
+	}
+    
+?>
+	<div class="wrap woocommerce">
+ 		<h1 class="wp-heading-inline">Update Installer <?php echo $name; ?></h1>
+ 		<span hidden="" class="admin-url"><?php echo admin_url('admin-ajax.php'); ?></span>
+ 		<form action="" method="post">
+		 	<table class="form-table" >
+		 		<tbody>
+		 			<tr>
+		 				<th>Enable</th>
+		 				<td>
+		 					 <input type="checkbox" class="" name="visibility"  <?php if($visibility == '1'){ echo 'checked';} ?> />&nbsp;<?php esc_html_e( 'Visibility', 'woocommerce' ); ?>
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<th>Company / Store name</th>
+		 				<td><input type="text" name="business_name" value="<?php echo $name; ?>">
+		 					<input type="hidden" class="installer_id" name="installer_id" value="<?php echo $id; ?>">
+		 					<input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<th>Address</th>
+		 				<td><input type="text" name="address" value="<?php echo $add; ?>"></td>
+		 			</tr>
+		 			<tr>
+		 				<th>State</th>
+		 				<td><input type="text" name="state" value="<?php echo $state; ?>"></td>
+		 			</tr>
+		 			<tr>
+		 				<th>City</th>
+		 				<td><input type="text" name="city" value="<?php echo $city; ?>"></td>
+		 			</tr>
+		 			<tr>
+		 				<th>Pincode</th>
+		 				<td><input type="text" name="pincode" value="<?php echo $pincode; ?>"></td>
+		 			</tr>
+		 			<tr>
+		 				<th>GST No.</th>
+		 				<td><input type="text" name="gstno" value="<?php echo $gst_no; ?>"></td>
+		 			</tr>
+		 			<tr>
+		                <th>Store Phone</th>
+		                <td><input type="text" name="store_phone" value="<?php echo $store_phone; ?>"></td>
+		            </tr>
+		 			<tr>
+		                <th>Available time</th>
+		                <td><input type="text" name="av_time" value="<?php echo $av_time; ?>"></td>
+		            </tr>
+		            <tr>
+		                <th>Available days</th>
+		                <td><input type="text" name="av_day" value="<?php echo $av_day; ?>"></td>
+		            </tr>
+		 			<tr>
+		 				<th>Image</th>
+		 				<td>
+		 					<input type="text" name="installer_img" readonly="" class="installer_img" value="<?php echo $image; ?>">
+		 					<input type="button" id="upload_img" name="" value="Upload Image">
+		 					
+		 				</td>
+		 			</tr>
+		 			
+		 			<tr>
+		                <th>Facilities</th>
+		                <td>
+		                   <div class="fc-list">
+                        
+                        <?php
+                        global $woocommerce;
+                        global $wpdb;
+                        $fc_sql = "SELECT * from th_installer_facilities where type = 'f'";
+                        $fc_data = $wpdb->get_results($fc_sql);
+
+                        
+                        $sfc_sql = $wpdb->get_var($wpdb->prepare("SELECT meta_value from th_installer_meta where installer_id = '$installer_id' and meta_name = 'facilities'"));
+                        
+
+                        $sfc_sql_arr = unserialize($sfc_sql); 
+                        //var_dump($sfc_sql_arr);
+                        foreach ($fc_data as $key => $fc_row)
+                        {
+                            $name = $fc_row->name;
+                            $f_id = $fc_row->f_id;
+                            ?>
+                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <input type="checkbox" class="" name=fc-check[]" id="<?php echo $f_id; ?>" value="<?php echo $f_id; ?>" <?php if(in_array($f_id, $sfc_sql_arr)){ echo 'checked';}  ?>/>&nbsp;<?php esc_html_e( $name , 'woocommerce' ); ?>      
+                            </p>
+                            <?php
+                        }
+                        ?>
+                    </div>
+		                </td>
+		            </tr>
+		            <tr>
+		                <td></td>
+		                <td><button class="button open-fc-modal">Add New</button>
+		                    <div class="custom-modal admin" id="add_new_facility" style="display: none;">
+		                        <div class="inner">
+		                            <div class="body">
+		                                <h3>Add New Facility</h3>
+		                                <input type="text" name="fc_name" class="fc-name">
+		                                <button class="fc-save">Save</button>
+		                            </div>
+		                            <div class="footer">
+		                            	<button class="close">Cancle</button>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </td>
+		            </tr>
+		            <tr>
+		                <th>Additional Services</th>
+		                <td>
+		                    <div class="as-list">                        
+	                        <?php
+	                        global $wpdb;
+	                        $as_sql = "SELECT * from th_installer_facilities where type = 'as'";
+	                        $as_data = $wpdb->get_results($as_sql);
+
+	                        $sas_sql = $wpdb->get_var( $wpdb->prepare("SELECT meta_value from th_installer_meta where installer_id = '$installer_id' and meta_name = 'additional_services'"));
+                        
+
+                        	$sas_sql_arr = unserialize($sas_sql);
+	                        foreach ($as_data as $key => $as_row)
+	                        {
+	                            $name = $as_row->name;
+	                            $f_id = $as_row->f_id;
+	                            ?>
+	                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+	                                <input type="checkbox" class="" name=as-check[]" id="<?php echo $f_id; ?>" value="<?php echo $f_id; ?>" <?php if(in_array($f_id, $sas_sql_arr)){ echo 'checked';}  ?> />&nbsp;<?php esc_html_e( $name , 'woocommerce' ); ?>      
+	                            </p>
+	                            <?php
+	                        }
+	                        ?>
+	                   	 	</div>
+		                </td>
+		            </tr>
+		 			<tr>
+		                <td></td>
+		                <td><button class="button open-as-modal">Add New</button>
+		                    <div class="custom-modal admin" id="add_new_as" style="display: none;">
+		                        <div class="inner">
+		                            <div class="body">
+		                                <h3>Add new additional services</h3>
+		                                <input type="text" name="as_name" class="as-name">
+		                                <button class="as-save">Save</button>
+		                                
+		                            </div>
+		                            <div class="footer">
+		                            	<button class="close">Cancle</button>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </td>
+		            </tr>
+		 		</tbody>
+		 		
+		 	</table>
+		 	<div class="user-details">
+        		<table class="form-table">
+        			<tr>
+		                <th>Contact person name</th>
+		                <td><input type="text" name="contact-person" value="<?php echo $contact_person; ?>"></td>
+		            </tr>
+        			<tr>
+		 				<th>contact_no</th>
+		 				<td><input type="text" name="contact" value="<?php echo $mobile_no; ?>">
+		 					<input type="hidden" name="final_contact" value="<?php echo $mobile_no; ?>" readonly>
+		 				</td>
+		 			</tr>
+		 			<tr>
+		 				<th>Password</th>
+		                <td><input type="text" name="pass"><p class="description">Leave blank if you dont change</p></td>
+		 				
+		 			</tr>
+		 			<tr>
+		               	<td>
+		 					<button class="button-primary woocommerce-save-button" type="submit" name="update">
+		 					Save Changes</button>
+		 					<a href="<?=get_admin_url();?>/admin.php?page=installer-manage" class="button-primary woocommerce-save-button add-installer-btn">Back</a> 
+		 				</td>
+		            </tr>
+        		</table>
+        	</div>
+ 		</form>
+
+ 		<?php
+ 		if(isset($_POST['update']))
+ 		{
+ 			global $wpdb, $woocommerce;
+ 			$installer_id = $_POST['installer_id'];
+			$name = $_POST['business_name'];
+			$mobile_no = $_POST['contact'];
+			$final_contact = $_POST['final_contact'];
+			$add = $_POST['address'];
+			$installer_img = $_POST['installer_img'];
+			$av_time = $_POST['av_time'];
+        	$av_day = $_POST['av_day'];
+
+			$url = "https://maps.googleapis.com/maps/api/geocode/json?address=".urlencode($add)."&sensor=false&key=AIzaSyCmMCGIlJKPcPn_hjlgo6j-RMfN4ZtOH70";
+            $result_string = file_get_contents($url);
+        
+            $result = json_decode($result_string, true);
+            $val = $result['results'][0]['geometry']['location'];
+
+            $lat = $val['lat'];
+            $lng = $val['lng'];
+
+			$state = $_POST['state'];
+			$city = $_POST['city'];
+			$pincode = $_POST['pincode'];
+			$gst_no = $_POST['gstno'];
+			$store_phone = $_POST['store_phone'];
+			$cmp_name = $_POST['cmp_name'];
+			$cmp_add = $_POST['cmp_add'];
+		    $visibility = '0';
+		    $pass = $_POST['pass'];
+		    $user_id = $_POST['user_id'];
+		    $contact_person = $_POST['contact-person'];
+
+		    if($_POST['visibility'])
+		    {
+		         $visibility = '1';
+		    }
+			
+			$facility_arr = [];
+			$as_arr = [];
+
+			if(!empty($_POST['fc-check'])) {
+				
+                $facility_arr = serialize($_POST['fc-check']);
+                var_dump($facility_arr);
+            }
+
+            if(!empty($_POST['as-check'])) {
+                $as_arr = serialize($_POST['as-check']);
+            }
+            
+            if($final_contact != $mobile_no){
+            	
+
+            	if ( !username_exists( $mobile_no ))
+        		{
+        			if($pass == ''){
+        				echo '<div class="notice notice-warning is-dismissible">
+			                 <p>If you change username you need to enter password.</p>
+			             </div>';
+        			}
+        			else
+        			{
+	            		wp_delete_user($user_id);
+
+	            		$userdata = array (
+	                    'user_login' => $mobile_no,
+	                    'user_pass' => $pass,
+	                    'role' => 'Installer',
+	                    'user_nicename' => $name,
+	                    'display_name' => $name,
+	                    'nickname' => $name,
+	                	);
+
+			           	$new_user_id = wp_insert_user( $userdata );  
+
+			            update_user_meta( $new_user_id, '_active', 1 );
+
+		         		$ch1 = curl_init();
+					    $message = "Dear, ".$contact_person." your username and password changed for your store ".$name.". New username : ".$mobile_no." and paswword: ".$pass." Thank You Tyrehub Team";
+					    $message = str_replace(' ', '%20', $message);
+					    $url_string="http://nimbusit.co.in/api/swsend.asp?username=t1ankitshah&password=81957032&sender=TYREHB&sendto=91".$mobile_no."&message=".$message;
+					    curl_setopt($ch1, CURLOPT_URL, $url_string); 
+					    curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1); 
+					    curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");			   
+					    $result1 = curl_exec($ch1);
+					    curl_close ($ch1); 
+
+			            $update = $wpdb->get_results("UPDATE th_installer_data SET address = '$add' , business_name = '$name' , city = '$city' , state = '$state' , pincode = '$pincode' , gst_no = '$gst_no' , company_name = '$cmp_name' , company_add = '$cmp_add' , wifi_service = '$wifi_service' , water_service = '$water' , tea_service = '$tea' , car_pickup_service = '$pickup', visibility = '$visibility' , car_wash = '$carwash' , puncture = '$puncture' , location_lattitude = '$lat' , location_longitude = '$lng' , image = '$installer_img' , available_time = '$av_time' , available_days = '$av_day' , store_phone = '$store_phone' , user_id = '$new_user_id',contact_no = '$mobile_no' WHERE installer_data_id = '$installer_id'");	           
+	 				
+	 				}
+
+	 				$fccount = $wpdb->get_var("SELECT COUNT(*) from th_installer_meta WHERE installer_id = '$installer_id' and meta_name = 'facilities'");
+
+	 			if($fccount != 0){
+	 				$update = $wpdb->get_results("UPDATE th_installer_meta SET meta_value = '$facility_arr' WHERE installer_id = '$installer_id' and meta_name = 'facilities'");
+	 			}
+	 			else{
+	 				$insert = $wpdb->insert('th_installer_meta', array( 
+                        'installer_id' => $installer_id,
+                        'meta_name' => 'facilities',
+                        'meta_value' => $facility_arr
+                         ));
+	 			}	
+
+	 			
+	 			$ascount = $wpdb->get_var("SELECT COUNT(*) from th_installer_meta WHERE installer_id = '$installer_id' and meta_name = 'additional_services'");
+	 			
+	 			if($fccount != 0){	
+	 				$update = $wpdb->get_results("UPDATE th_installer_meta SET meta_value = '$as_arr' WHERE installer_id = '$installer_id' and meta_name = 'additional_services'");
+	 			}else{
+	 				 $insert = $wpdb->insert('th_installer_meta', array( 
+                        'installer_id' => $installer_id,
+                        'meta_name' => 'additional_services',
+                        'meta_value' => $as_arr
+                         ));
+	 			}
+
+            	}
+            }
+            else{
+            	if($pass != ''){
+            		
+            	 	wp_set_password($pass, $user_id);
+            	}
+            	
+            	update_user_meta( $user_id, 'first_name', $contact_person );
+            	
+            	
+
+	 			$update = $wpdb->get_results("UPDATE th_installer_data SET address = '$add' , business_name = '$name' , city = '$city' , state = '$state' , pincode = '$pincode' , gst_no = '$gst_no' , company_name = '$cmp_name' , company_add = '$cmp_add' , visibility = '$visibility' , location_lattitude = '$lat' , location_longitude = '$lng' , image = '$installer_img' , available_time = '$av_time' , available_days = '$av_day' , store_phone = '$store_phone', contact_person = '$contact_person' WHERE installer_data_id = '$installer_id'");
+	 			
+	 			$fccount = $wpdb->get_var("SELECT COUNT(*) from th_installer_meta WHERE installer_id = '$installer_id' and meta_name = 'facilities'");
+	 			
+
+	 			if($fccount != 0){
+	 				$update = $wpdb->get_results("UPDATE th_installer_meta SET meta_value = '$facility_arr' WHERE installer_id = '$installer_id' and meta_name = 'facilities'");
+	 			}
+	 			else{
+	 				$insert = $wpdb->insert('th_installer_meta', array( 
+                        'installer_id' => $installer_id,
+                        'meta_name' => 'facilities',
+                        'meta_value' => $facility_arr
+                         ));
+	 			}	
+
+	 			
+	 			$ascount = $wpdb->get_var("SELECT COUNT(*) from th_installer_meta WHERE installer_id = '$installer_id' and meta_name = 'additional_services'");
+	 			
+	 			if($ascount != 0){	
+	 				$update = $wpdb->get_results("UPDATE th_installer_meta SET meta_value = '$as_arr' WHERE installer_id = '$installer_id' and meta_name = 'additional_services'");
+	 			}else{
+	 				 $insert = $wpdb->insert('th_installer_meta', array( 
+                        'installer_id' => $installer_id,
+                        'meta_name' => 'additional_services',
+                        'meta_value' => $as_arr
+                         ));
+	 			}
+	 			
+ 			}
+ 			wp_redirect( '?page=installer-add-new&action=edit&installer_id='.$installer_id );
+ 		}
+ 		?>
+ 	</div>
+ 	<?php
+}

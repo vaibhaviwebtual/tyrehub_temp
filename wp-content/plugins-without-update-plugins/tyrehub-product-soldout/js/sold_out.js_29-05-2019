@@ -1,0 +1,227 @@
+jQuery(document).ready(function($) 
+{
+	$(document).on('click','.save-list',function(e){
+		e.preventDefault();
+		var admin_url = $('.admin-url').text();	
+        var prd_list = [];
+		$(".soldout .selected-products .single-product").each(function()
+        {
+        	 product_id = $(this).attr('data-id');        	 
+            prd_list.push(product_id);
+        });
+       
+        	 $.ajax({    
+	                    type: "POST", 
+	                    url: admin_url,
+	                    data: {
+	                        action: 'soldout_product_list',
+	                        prd_list: prd_list,
+	                    },
+	                    success: function (data) {
+                            $('.message-block').html('<div class="updated notice notice-success is-dismissible"><p>List updated!</p></div>');
+	                       // $('.product-details').html(data);
+	                      // location.reload();
+	                      // window.location.replace('?page=discount_rule');
+	                    },
+	                });
+        
+	});
+	
+
+	$(document).on('click','.soldout .search-btn',function(e){
+
+		e.preventDefault();
+        var width = $('.width').val();
+        var ratio = $('.ratio').val();
+        var diameter = $('.diameter').val();
+        var cat = $('select.category').val();
+        var admin_url = $('.admin-url').text();
+        var loader = '<img src="https://www.tyrehub.com/dev/wp-content/plugins/tyrehub-product-discount/loading.gif">'; 
+        $.ajax({    
+                type: "POST", 
+                url: admin_url,
+                data: {
+                    action: 'search_product_data',
+                    width: width,
+                    ratio: ratio,
+                    diameter: diameter,
+                    cat: cat,
+                },
+                beforeSend: function() {                        
+                        $('.soldout .product-details').append(loader);
+                    },
+                success: function (data) {
+                   
+                    $('.soldout .product-details').html(data);
+                },
+            });
+	});
+
+    
+    $(document).on('click','.select-all',function(e){
+        $('.product-details .single-product').click();
+    });
+
+     $(document).on('click','.soldout .product-details .single-product',function(e)
+    {
+        var curent_single_prd = $(this);
+        var single_product = $(this).html();
+        id = $(this).attr('data-id');
+        var prd_flg = 'not-in-list';
+        if($(".product-container .selected-products").html() == '')
+        {
+            $('.selected-products').append('<div class="single-product" data-id="'+id+'">'+single_product+'</div>');
+            $(curent_single_prd).css('display','none');
+        }
+        else
+        {
+            $(".product-container .selected-products .single-product").each(function()
+            {
+                selected_id = $(this).attr('data-id');
+                console.log(selected_id);
+                if(id == selected_id)
+                {
+                    prd_flg = 'in-list';
+                }
+            });
+
+            if(prd_flg == 'not-in-list'){
+                $('.selected-products').append('<div class="single-product" data-id="'+id+'" id="'+id+'"> <div class="remove"><span><<</span></div>'+single_product+'<div class="status"><input type="checkbox" name="status" class="prd-status" checked></div></div>');
+                $(curent_single_prd).css('display','none');
+            }
+        }     
+        
+    });
+
+    $(document).on('click','.soldout .selected-products .single-product .remove',function()
+    {
+        
+            var id = $(this).parent().attr('data-id');
+            var name = $(this).parent().find('.name').html();
+            var regular_price = $(this).parent().find('.regular-price').html();
+            var sale_price = $(this).parent().find('.sale-price').html();
+            var amount = $(this).parent().find('.discount_amount').val();
+            search_id = '.product-details .single-product#'+id;
+            console.log($( ".product-details" ).find('#'+id).html());
+            var search_res = $( ".product-details" ).find('#'+id).html();
+            if($.type(search_res) === "undefined")
+            {
+                var temp_html ='<div class="single-product" data-id="'+id+'" id="'+id+'">'; 
+
+                temp_html +='<div class="name">'+name+'</div>';
+                temp_html +='<div class="price regular-price">'+regular_price+'</div>';
+                temp_html +='<div class="price sale-price">'+sale_price+'</div>';
+                temp_html +='<div class="send"><span>>></span></div>';
+                $( ".product-details" ).append(temp_html);
+            }
+            else{
+                $(search_id).css('display','block');
+            }        
+            $(this).parent().remove();
+             
+
+    });
+
+    $(document).on('click','.change-price .search-btn',function()
+    {
+        var admin_url = $('.admin-url').text();
+        var width = $(this).parent().find('.select-width').val();
+        var ratio = $(this).parent().find('.select-ratio').val();
+        var diameter = $(this).parent().find('.select-diameter').val();
+        var cat = $(this).parent().find('select.select-category').val();
+        var loader = '<img src="https://www.tyrehub.com/dev/wp-content/plugins/tyrehub-product-discount/loading.gif">'; 
+        
+        $.ajax({    
+                type: "POST", 
+                url: admin_url,
+                data: {
+                    action: 'product_data_for_changeprice',
+                    width: width,
+                    ratio: ratio,
+                    diameter: diameter,
+                    cat: cat,
+                },
+                beforeSend: function() {                        
+                        $('.change-price .product-details').append(loader);
+                    },
+                success: function (data) {
+                   
+                    $('.change-price .product-details').html(data);
+                },
+            });
+    });
+
+    
+     $(document).on('click','.search-from-log',function()
+    {   
+        var admin_url = $('.admin-url').text();
+        var name = $('.price-change-log .product-name').val();
+        console.log(name);
+        $.ajax({    
+                type: "POST", 
+                url: admin_url,
+                data: {
+                    action: 'search_prd_for_log',
+                    name: name,
+                },
+                success: function (data) {
+                   
+                    $('.log-table tbody').html(data);
+                },
+            });
+    });
+
+     $(document).on('keyup','input.new-price',function()
+    { 
+        var single_prd = $(this).parents('.single-product');
+        var reg_price = $(single_prd).find('.price.regular-price').attr('data-price');
+        var new_price = $(this).val();
+        var old_dis = $(single_prd).find('.dis-per').attr('data-old-dis');
+
+        if(new_price == ''){
+            $(single_prd).find('.dis-per').text(old_dis+'%');
+        }else{
+            var discount = reg_price - new_price;
+            var dis_per = 100 * discount / reg_price;
+            $(single_prd).find('.dis-per').text('('+parseFloat(dis_per.toFixed(2))+'%)off');
+         }
+        
+        
+    });
+     
+     $(document).on('click','button.change-price',function()
+    {
+       // alert('hii');
+        var prd_list = {};
+        $(".change-price .single-product").each(function()
+        {
+            
+            var amount = $(this).find('.amount input').val();
+            if(amount != '')
+            {
+                console.log(amount);
+                var product_id = $(this).attr('data-id');
+                prd_list[product_id] = amount;
+            }
+            else{
+                prd_list[amount] = amount;
+            }
+            
+        });
+        //console.log(prd_list);
+
+        var admin_url = $('.admin-url').text();
+        $.ajax({    
+                type: "POST", 
+                url: admin_url,
+                data: {
+                    action: 'change_product_price',
+                    prd_list: prd_list,
+                },
+                success: function (data) {
+                   $('.message-block').html('<div class="updated notice notice-success is-dismissible"><p>Price Changed!</p></div>');
+                },
+            });
+    });
+
+});

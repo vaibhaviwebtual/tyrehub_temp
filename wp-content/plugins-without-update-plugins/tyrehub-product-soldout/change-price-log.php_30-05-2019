@@ -1,0 +1,124 @@
+<?php 
+
+function change_price_log(){
+?>
+	<div class="wrap">        
+       	<div id="icon-users" class="icon32"><br/></div>
+       	<div class="admin-url" hidden=""><?php echo admin_url('admin-ajax.php'); ?></div>
+		<h1 class="wp-heading-inline">Change Price Log</h1>		
+		
+		<div class="price-change-log">
+            Search By:
+            Product <input type="text" name="product-name" class="product-name">
+            <button class="search-from-log">Search</button>
+            <table class="log-table wp-list-table widefat fixed striped">
+            	<thead>
+            		<tr>
+	            		<th>Product</th>
+	            		<th>Price Type</th>
+	            		<th>Old Price</th>
+	            		<th>New Price</th>
+	            		<th>Date Time</th>
+	            		<th>User</th>
+	            	</tr>
+            	</thead>
+            	
+                    <tbody>
+                <?php 
+                	global $woocommerce , $wpdb;
+
+    				$log_sql = $wpdb->get_results("SELECT * from th_change_product_price_log order by log_id desc");
+    				foreach ($log_sql as $key => $log_data)
+    				{
+    					?>
+    					<tr>
+    						<td>
+    							<?php
+    								$variation_ID = $log_data->product_id;
+    								 $product_variation = new WC_Product_Variation( $variation_ID );
+
+            						echo $variation_des = $product_variation->get_description();
+
+            						$price_args = array(
+						                    'ex_tax_label'       => false,
+						                    'currency'           => '',
+						                    'decimal_separator'  => wc_get_price_decimal_separator(),
+						                    'thousand_separator' => wc_get_price_thousand_separator(),
+						                    'decimals'           => wc_get_price_decimals(),
+						                    'price_format'       => get_woocommerce_price_format(),
+						                  );
+    							?>
+    						</td>
+    						<td><?php echo $log_data->price_type; ?></td>
+    						<td><?php echo wc_price( $log_data->old_price, $price_args ); ?></td>
+    						<td><?php echo wc_price( $log_data->new_price, $price_args ); ?></td>
+    						<td><?php echo $log_data->date; ?></td>
+    						<td>
+    							<?php 
+    							 $userdata = get_user_by( 'ID', $log_data->user_id );
+
+    							 echo $userdata->user_login;	
+    							?>	
+    						</td>
+    					</tr>
+    					<?php
+    				}
+                ?>
+            </tbody>
+                </table>
+            </div>
+        </div>
+	<?php
+}
+
+add_action('wp_ajax_search_prd_for_log', 'search_prd_for_log');
+add_action('wp_ajax_nopriv_search_prd_for_log', 'search_prd_for_log');
+function search_prd_for_log()
+{
+	$name = $_POST['name'];
+	$name = strtolower($name);
+	 
+	global $woocommerce , $wpdb;
+    $log_sql = $wpdb->get_results("SELECT * from th_change_product_price_log order by log_id desc");
+
+    foreach ($log_sql as $key => $log_data)
+   	{
+   		$variation_ID = $log_data->product_id;
+		$product_variation = new WC_Product_Variation( $variation_ID );
+
+		$variation_des = $product_variation->get_description();
+		$variation_des = strtolower($variation_des);
+		if(strpos($variation_des, $name) !== false)
+		{
+			?>
+			<tr>
+				<td>
+					<?php
+						$variation_ID = $log_data->product_id;
+						 $product_variation = new WC_Product_Variation( $variation_ID );
+
+						echo $variation_des = $product_variation->get_description();
+
+						$price_args = array(
+			                    'ex_tax_label'       => false,
+			                    'currency'           => '',
+			                    'decimal_separator'  => wc_get_price_decimal_separator(),
+			                    'thousand_separator' => wc_get_price_thousand_separator(),
+			                    'decimals'           => wc_get_price_decimals(),
+			                    'price_format'       => get_woocommerce_price_format(),
+			                  );
+					?>
+				</td>
+				<td><?php echo wc_price( $log_data->old_price, $price_args ); ?></td>
+				<td><?php echo wc_price( $log_data->new_price, $price_args ); ?></td>
+				<td><?php echo $log_data->date; ?></td>
+				<td><?php 
+					 	$userdata = get_user_by( 'ID', $log_data->user_id );
+					 	echo $userdata->user_login;	
+					?>
+				</td>
+			</tr>
+			<?php
+		}
+	}
+}

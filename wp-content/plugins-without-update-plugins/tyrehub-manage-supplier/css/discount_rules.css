@@ -1,0 +1,608 @@
+   .product-details,
+.selected-products{
+    width: 47%;
+    float: left;
+    padding: 5px 10px;
+}
+.product-details .single-product,
+.selected-products .single-product{
+    width: 100%;
+    float: left;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 10px;
+}
+.product-details .single-product .name{
+    width: 45%;
+    float: left;
+}
+.selected-products .single-product .name{
+    width: 26%;
+    float: left;
+}
+.product-details .single-product div.amount{
+    width: 10%;
+    float: left;
+    text-align: center;
+}
+.product-details .single-product .amount .discount_amount{
+    display: none;
+}
+.single-product .amount .discount_amount{
+    width: 50px;
+}
+.product-details .single-product .send{
+    width: 10%;
+    float: left;
+}
+.selected-products .single-product .send{
+    display: none;
+}
+.selected-products .single-product div.amount{
+    width: 15%;
+    float: left;
+}
+.selected-products .single-product .status{
+    width: 10%;
+    float: left;
+}
+.selected-products .single-product .remove{
+    width: 10%;
+    float: left;
+}
+.product-details .single-product .status,
+.product-details .single-product .remove,
+.soldout .selected-products .single-product .status
+{
+    display: none;
+}
+.selected-products .single-product .remove span,
+.product-details .single-product .send span{
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid;
+    line-height: 30px;
+}
+.product-details .single-product .price{
+    width: 15%;
+    float: left;
+}
+.selected-products .single-product .price{
+    width: 13%;
+    float: left;
+}
+.prd-search input[type='text']{
+    width: 50px;
+}
+.selected-products {
+    border: 2px solid green;
+    margin-left: 10px;
+    height: 500px;
+    overflow: auto;
+}
+.product-details {
+    border: 1px solid #999;
+    min-height: 500px;
+    overflow: auto;
+}
+.change-price .product-details{
+    min-height: unset;
+}
+.prd-search {
+margin-bottom: 10px;
+}
+.product-details .single-product:hover{
+background: rgba(71,255,15,0.2);
+cursor: pointer;
+}
+.selected-products .single-product:hover{
+background: rgba(255,22,22,0.2);
+}
+.search-btn {
+padding: 5px 15px;
+border: 1px solid #3C2474;
+background: #fff;
+cursor: pointer;
+}
+.search-btn:hover {
+background: #3C2474;
+color: #fff;
+}
+.prd-search select {
+width: 150px;
+height: 28px;
+}
+.prd-search strong, .prd-search input, .prd-search select {
+margin-right: 5px;
+}
+.selected-products .header,
+.product-details .header{
+    width: 100%;
+    float: left;
+    position: sticky;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0;
+    font-size: 10px;
+    background: #eee;
+    border-bottom: 1px solid gainsboro;
+}
+.selected-products .header .name{
+    width: 26%;
+    float: left;
+}
+.selected-products .header .price{
+    width: 13%;
+    float: left;
+}
+.selected-products .header .amount{
+    width: 15%;
+    float: left;
+}
+.selected-products .header .status,
+.selected-products .header .remove{
+    width: 10%;
+    float: left;
+}
+.product-details .header .name{
+    width: 45%;
+    float: left;
+    text-align: left;
+}
+.product-details .header .price{
+    width: 15%;
+    float: left;
+}
+.product-details .header .amount{
+    width: 15%;
+    float: left;
+
+}
+.product-details .header .add{
+    width: 10%;
+    float: left;
+}
+
+
+.save-list{
+    margin-left: 30px;
+    padding: 10px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.select-all{
+    float: right;
+    background: green;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.amount input{
+    width: 70px;
+}
+input[type=number]{
+    width: 80px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.per-after{
+    margin-left: -20px;
+}
+.price-change-log{
+    width: 100%;
+    float: left;
+    padding: 5px 10px;
+}
+.price-change-log .log-table{
+    width: 100%;
+}
+.price-change-log .log-table th{
+    font-weight: 600;
+}
+.change-price .product-details{
+    width: 97%;
+    text-align: center;
+}
+.change-price .product-details .single-product{
+    font-size: 12px;
+}
+.price-change-log .header{
+    font-size: 12px;
+}
+button.change-price{
+    padding: 10px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    float: right;
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+}
+.change-price .product-details .header .name,
+.change-price .product-details .single-product .name{
+    width: 32%;
+    text-align: left;
+}
+.change-price .product-details .header .id,
+.change-price .product-details .single-product .id{
+    width: 3%;
+    text-align: left;
+
+    float: left;
+}
+
+
+.change-price .product-details .single-product div.amount,
+.change-price .product-details div.amount,
+.change-price .product-details div.dis-per{
+    width: 15%;
+    float: left;
+    text-align: left;
+}
+.change-price .product-details div.price
+{
+    width: 10%;
+    float: left;
+}
+.promotion-voucher{
+    width: 98%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.promotion-voucher .installer-data{
+    width:calc(50% - 30px);
+    float: left;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.promotion-voucher .installer-data .single-installer{
+    border-bottom: 1px solid #ccc;
+    border-top: 5px solid #3E4796;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+.promotion-voucher .right-section{
+    width: calc(50% - 30px);
+    float: left;
+    padding: 0 5px;
+}
+.promotion-voucher .installer-data .single-installer img
+{
+    width: 25px;
+    margin-right: 10px;
+}
+.promotion-voucher .single-installer .first-row{
+    display: flex;
+    align-items: center;
+}
+
+.promotion-voucher .single-installer .first-column{
+    width: 10%;
+    float: left;
+}
+.promotion-voucher .single-installer .second-column{
+    width: 80%;
+    float: left;
+    }
+.promotion-voucher .single-installer .third-column{
+    width: 10%;
+    float: left;
+}
+.create-bulk-promotional-voucher{
+    position: fixed;
+    right: 0;
+    padding: 10px;
+    background: green;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    top: 225px;
+}
+#after_voucher_order{
+    display: block;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    background: rgba(0, 0, 0, 0.5);
+}
+#after_voucher_order .inner{
+    width: 40%;
+    margin: 0 auto;
+    z-index: 1050;
+    top: 150px;
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+#after_voucher_order .body{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    min-height: 100px;
+    text-align: center;
+}
+#after_voucher_order button{
+    background: #3E4796;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+#after_voucher_order button a{color: #fff;
+    text-decoration: none;}
+
+.row-voucher-price{
+    border-bottom: 2px solid #CCC;
+    padding: 10px 0px;
+}
+.selected-installer{
+    border: 2px dashed green;
+    padding: 6px;
+    display: none;
+}
+.row-search{
+    padding: 10px 0px;
+}
+.user-details{
+
+}
+
+.price-update-section {
+    float: left;
+    width: 100%;
+    padding-bottom: 25px;
+}
+.update-by {
+    float: left;
+    width: 35%;
+    text-align: left;
+}
+.update-tube-price  , .update-tyre-price{
+    display: none;
+     width: 10%;
+    float: left;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(55, 62, 132, 1);
+    margin-bottom: 10px;    
+    width: 100%;
+    margin-top: 20px;
+}
+.card-body {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;    
+    padding: 30px 0px 15px;
+    font-weight: 400;
+    box-shadow: 0 2px 5px 0 rgba(55, 62, 132, 0.16), 0 2px 10px 0 rgba(55, 62, 132, .12);
+}
+.card-title {
+    display: inline-block;
+    margin-top: -40px;
+    background-color: #fff;
+    position: absolute;
+    padding: 0px 5px;
+    left: 10px;
+    text-transform: capitalize;
+    color: #373e84;
+}
+.inner-card-title {
+	display: inline-block;
+    position: absolute;
+    padding: 0px 5px;
+    left: 10px;
+    text-transform: capitalize;
+    color: #373e84;
+    line-height: 35px;
+}
+.card-body .rule-name {
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid rgba(62, 71, 150, 0.60);
+    color: #373e84;
+}
+.card-body .start-date,
+.card-body .end-date {
+    font-size: 16px;
+    border: 1px solid rgba(62, 71, 150, 0.60);
+    display: inline-block;
+    padding: 5px;
+    height: 35px;
+    background-color: #fff;
+    color: #373e84;
+}
+
+.card-body .rule-name::placeholder,
+.card-body .start-date::placeholder,
+.card-body .end-date::placeholder,
+.inner-card-body input[type="text"]::placeholder,
+table.bulk-box input[type="number"]::placeholder {
+  color: #373e84;
+  opacity: 1;
+}
+
+.card-body .rule-name:-ms-input-placeholder,
+.card-body .start-date:-ms-input-placeholder,
+.card-body .end-date:-ms-input-placeholder,
+.inner-card-body input[type="text"]::placeholder,
+table.bulk-box input[type="number"]::placeholder{
+  color: #373e84;
+}
+
+.card-body .rule-name::-ms-input-placeholder,
+.card-body .start-date::-ms-input-placeholder,
+.card-body .end-date::-ms-input-placeholder,
+.inner-card-body input[type="text"]::placeholder,
+table.bulk-box input[type="number"]::placeholder {
+  color: #373e84;
+}
+
+.inner-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.inner-card-body {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;    
+    padding: 15px 0px 10px;
+}
+.search-product {
+	box-shadow: 0 2px 5px 0 rgba(62, 71, 150, .30), 0 2px 10px 0 rgba(62, 71, 150, .15);
+}
+.tyre-discount {
+    padding: 30px 15px 15px;
+}
+.inner-card-body input[type="text"] {
+    font-size: 16px;
+    padding: 5px;
+    height: 35px;
+    background-color: transparent;
+    border-color: rgba(62, 71, 150, 0.60);
+	color: #373e84;
+}
+.inner-card-body select {
+    max-width: 300px;
+    padding: 5px;
+    height: 35px;
+    border-radius: 0;
+    border-color: rgba(62, 71, 150, 0.60);
+	color: #373e84;
+}
+.inner-card-body .search-btn {
+    width: 100%;
+}
+.product-container {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+.product-details, .selected-products {
+    padding: 0px;
+    width: calc(50% - 5px);
+    float: left;
+}
+.selected-products {
+    border: 1px solid #3E4796;
+    margin-left: 10px;
+}
+.product-details {
+    border: 1px solid #3E4796;
+}
+.selected-products h2,
+.product-details h2 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0px 15px;
+    display: inline-block;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #3E4796;
+    color: #3E4796;
+    margin-bottom: 0px;
+}
+.selected-products .header, .product-details .header,
+.product-details .single-product, .selected-products .single-product {
+    padding-left: 15px;
+    padding-right: 15px;    
+}
+.single-product .status input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-top: 3px;
+}
+.save_discount, .update_discount {
+    background-color: #2f3672;
+    color: #fff;
+    border: 0px;
+    height: 35px;
+    padding: 0px 20px;
+    cursor: pointer !important; 
+}
+.back-btn {
+    background-color: #2f3672;
+    color: #fff;
+    border: 0px;
+    height: 35px;
+    padding: 0px 20px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 35px;
+}
+.save_discount:hover,
+.update_discount:hover, 
+.back-btn:hover {
+    background-color: #ffd642 !important;
+    color: #000 !important;
+}
+.inner-card-body .bulk-price-update {
+    background-color: #e2e2e2;
+	margin-top: 0px;
+    margin-bottom: 0px;
+}
+.inner-card-body .supplier-tbl-outer legend {
+    background: #3E4796;
+    padding: 5px 15px;
+}
+.inner-card-body .bulk-price-update input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+.inner-card-body .bulk-price-update label {
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 0;
+    line-height: 16px;
+}
+.inner-card-body .bulk-price-update legend label {
+    color: #fff;
+}
+.selected-products  table.bulk-box .price-sel {
+    width: 70%;
+}
+.selected-products table.bulk-box select {
+    max-width: 250px;
+	width: 100%;
+}
+.product-details .single-product, .selected-products .single-product {
+    font-size: 12px;
+    line-height: 16px;
+}
+.inner-card-body .amount input[type="text"] {
+    height: 28px;
+}
+table.bulk-box input[type="number"] {
+	padding: 5px;
+	color: #373e84;
+}
